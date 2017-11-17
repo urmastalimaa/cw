@@ -29,8 +29,8 @@
           <div class="col-md-8 col-md-offset-2 text-center">
             <div class="display-t">
               <div class="display-tc">
-                <h1>Dagmar &amp; Kaarel</h1>
-                <h2>29.07.17</h2>
+                <h1>Liisa &amp; Nick</h1>
+                <h2>??.07.18</h2>
                 <div class="simply-countdown simply-countdown-one"></div>
               </div>
             </div>
@@ -39,6 +39,7 @@
       </div>
     </div>
 
+    <!--
     <div id="couple-about-each-other">
       <div class="container">
         <div class="couple-wrap">
@@ -198,6 +199,7 @@
       </div>
     </div>
   </div>
+  -->
 
   <!-- jQuery -->
   <script src="js/jquery.min.js"></script>
@@ -213,20 +215,17 @@
 
   <script>
 
-var d = new Date(Date.parse("15:30 29 July, 2017"));
-
-// default example
 simplyCountdown('.simply-countdown-one', {
-  year: 2017,
+  year: 2018,
   month: 7,
-  day: 29,
-  hours: 15,
-  minutes: 30,
+  day: 15,
+  hours: 14,
+  minutes: 00,
   words: {
-    days: 'päeva',
-    hours: 'tundi',
-    minutes: 'minutit',
-    seconds: 'sekundit'
+    days: 'days',
+    hours: 'hours',
+    minutes: 'minutes',
+    seconds: 'seconds'
   },
   plural: false,
   enableUtc: false
@@ -253,6 +252,7 @@ simplyCountdown('.simply-countdown-one', {
       );
     }
 
+   // This is not working
     var firstNonHeader = $("#page > div:nth-child(2");
     if(anyPartOfElementVisibleInViewport(firstNonHeader[0])) {
       $('.scroll-down').hide();
@@ -267,4 +267,3 @@ simplyCountdown('.simply-countdown-one', {
 
 </body>
 </html>
-
