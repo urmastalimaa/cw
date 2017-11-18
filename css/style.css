@@ -45,12 +45,12 @@ body {
       content: ""; }
 
 a {
-  color: #ffcf40;
+  color: #C5AE87;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
   a:hover, a:active, a:focus {
-    color: #ffcf40;
+    color: #C5AE87;
     outline: none;
     text-decoration: none; }
 
@@ -58,22 +58,22 @@ p {
   margin-bottom: 20px; }
 
 h1, h2, h3, h4, h5, h6, figure {
-  color: #ffcf40;
+  color: #C5AE87;
   font-family: "Playfair display", serif;
   font-weight: 400;
   margin: 0 0 20px 0; }
 
 ::-webkit-selection {
   color: #fff;
-  background: #ffcf40; }
+  background: #C5AE87; }
 
 ::-moz-selection {
   color: #fff;
-  background: #ffcf40; }
+  background: #C5AE87; }
 
 ::selection {
   color: #fff;
-  background: #ffcf40; }
+  background: #C5AE87; }
 
 #fh5co-event,
 .fh5co-bg {
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6, figure {
   #fh5co-event .fh5co-heading {
     margin-top: 2em; }
     #fh5co-event .fh5co-heading h2 {
-      color: #ffcf40;
+      color: #C5AE87;
       font-family: "Playfair display", serif; }
     #fh5co-event .fh5co-heading span {
       color: rgba(187, 189, 192, 0.5);
@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6, figure {
     #fh5co-event .event-wrap h3 {
       font-size: 28px;
       font-weight: 700;
-      color: #ffcf40;
+      color: #C5AE87;
       font-family: "Playfair display", serif;
       border-bottom: 1px solid rgba(187, 189, 192, 0.5);
       display: block;
@@ -232,7 +232,7 @@ form label {
     .fh5co-cover .display-tc h2 {
       margin: 0;
       padding: 0;
-      color: #ffcf40; }
+      color: #C5AE87; }
     #header .display-tc h1,
     #fh5co-counter .display-tc h1,
     .fh5co-cover .display-tc h1 {
@@ -352,7 +352,7 @@ form label {
     font-size: 20px;
     background: #fff;
     padding: 20px;
-    color: #ffcf40;
+    color: #C5AE87;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -377,7 +377,7 @@ form label {
       width: 100%; } }
   .couple-half h3 {
     font-family: "Playfair display", serif;
-    color: #ffcf40;
+    color: #C5AE87;
     font-size: 30px; }
   .couple-half .bride {
     float: right;
@@ -448,7 +448,7 @@ form label {
   width: 100%; }
   .couple-description h3 {
     font-family: "Playfair display", serif;
-    color: #ffcf40;
+    color: #C5AE87;
     font-size: 50px; }
   .couple-description .bride {
     float: right;
@@ -528,7 +528,7 @@ form label {
     margin-bottom: 10px;
     line-height: 1.5;
     font-weight: bold;
-    color: #ffcf40;
+    color: #C5AE87;
     font-family: "Playfair display", serif; }
     @media screen and (max-width: 768px) {
       .fh5co-heading h2 {
@@ -560,7 +560,7 @@ form label {
   position: relative;
   margin-bottom: 2em; }
   #what-to-bring .fh5co-heading h2 {
-    color: #ffcf40;
+    color: #C5AE87;
     font-family: "Playfair display", serif; }
   #what-to-bring .fh5co-heading p {
     line-height: 2.5;
@@ -612,16 +612,16 @@ div:after {
 .btn-primary {
   background: #BBBDC0;
   color: #fff;
-  border: 2px solid #ffcf40; }
+  border: 2px solid #C5AE87; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: #ffd55a !important;
-    border-color: #ffd55a !important; }
+    background: #cdba98 !important;
+    border-color: #cdba98 !important; }
   .btn-primary.btn-outline {
     background: transparent;
-    color: #ffcf40;
-    border: 2px solid #ffcf40; }
+    color: #C5AE87;
+    border: 2px solid #C5AE87; }
     .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-      background: #ffcf40;
+      background: #C5AE87;
       color: #fff; }
 
 .form-group .btn-primary {
@@ -642,7 +642,7 @@ div:after {
   .form-control:active, .form-control:focus {
     outline: none;
     box-shadow: none;
-    border-color: #ffcf40; }
+    border-color: #C5AE87; }
 
 .fh5co-loader {
   position: fixed;
@@ -654,7 +654,7 @@ div:after {
   background: url(../images/loader.gif) center no-repeat #fff; }
 
 .scroll-down {
-  background: #ffd55a;
+  background: #cdba98;
   opacity: 1;
   -webkit-transition: all .5s ease-in 3s;
   transition: all .5s ease-in 3s; }
