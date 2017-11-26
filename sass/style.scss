@@ -123,6 +123,42 @@ body {
 	background: #fff;
 }
 
+.heading {
+	margin-bottom: 5em;
+	&.heading-sm {
+		margin-bottom: 2em;
+	}
+	h2 {
+		font-size: 50px;
+		margin-bottom: 10px;
+		line-height: 1.5;
+		font-weight: bold;
+		color: $header-color;
+		font-family: $header-font;
+		@media screen and (max-width: $screen-sm){
+			font-size: 35px;
+		}
+	}
+
+  h3 {
+		color: $text-color;
+		font-family: $text-font;
+  }
+	p {
+		font-size: 18px;
+		line-height: 1.5;
+		color: $text-color;
+	}
+	span{
+		text-transform: uppercase;
+		font-size: 13px;
+		letter-spacing: 2px;
+		font-weight: 600;
+		color: rgba($brand-black,.4);
+	}
+}
+
+
 #header {
   display: flex;
   flex-direction: column;
@@ -287,7 +323,19 @@ body {
   }
 }
 
+#timeline {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  h2 {
+    text-align: center;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+}
+
 #page {
+  display: flex;
+  flex-direction: column;
 	position: relative;
 	overflow-x: hidden;
 	width: 100%;
@@ -343,7 +391,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: $brand-primary;
 }
 
-#fh5co-event,
+#timeline,
 .fh5co-bg {
 	background-size: cover;
 	background-position: top center;
@@ -371,19 +419,16 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-#fh5co-event {
-	height: 600px;
-	.display-t,
-	.display-tc {
-		height: 550px;
-		display: table;
-		width: 100%;
-    .event-container {
-      height: 100%;
-    }
-	}
-	.fh5co-heading{
-	}
+#timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .event-and-time {
+    white-space: nowrap;
+    border-bottom: 1px solid rgba($text-color,.5);
+    margin-bottom: 1em;
+  }
 	.overlay {
 		position: absolute;
 		top: 0;
@@ -392,16 +437,13 @@ h1, h2, h3, h4, h5, h6, figure {
 		bottom: 0;
 		background: rgba(0, 0, 0, .4);
 	}
+
 	@media screen and (max-width: $screen-sm) {
 		height: inherit;
 		padding: 7em 0;
-		.display-t,
-		.display-tc {
-			height: inherit;
-		}
 	}
 
-	.event-wrap{
+	.event-wrap {
 		border: 2px solid rgba($text-color,.5);
 		padding: 30px;
 		width: 100%;
@@ -411,35 +453,78 @@ h1, h2, h3, h4, h5, h6, figure {
 		@media screen and (max-width: $screen-sm) {
 			margin-bottom: 10px;
 		}
-		h3{
+		h3 {
 			font-size: 28px;
       font-weight: 700;
 			color: $header-color;
       font-family: $header-font;
-			border-bottom: 1px solid rgba($text-color,.5);
-			display: block;
+			display: inline-block;
 			padding-bottom: 20px;
 			text-transform: uppercase;
 			letter-spacing: 2px;
 		}
-		p,span{
+		p,span {
 			display: inline-block;
 			color: rgba($text-color,.8);
       font-family: $text-font;
 			font-size: 18px;
       text-shadow: 0px 0px $text-color;
 		}
-		i{
+		i {
 			color: rgba($text-color,1);
       font-family: $text-font;
 			font-size: 24px;
 		}
-		.event-col{
-			width: 50%;
-			float: left;
-			margin-bottom: 20px;
-		}
 	}
+}
+
+#accomodation {
+  h2 { 
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  margin-top: 2em;
+  width: 60%;
+  align-self: center;
+}
+
+#flowers {
+  h2 { 
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  margin-top: 2em;
+  width: 60%;
+  align-self: center;
+}
+
+#gifts {
+  h2 { 
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  margin-top: 2em;
+  width: 60%;
+  align-self: center;
+
+  .poem {
+    text-align: center;
+  }
+}
+
+#registration {
+  margin-top: 2em;
+
+  h2 { 
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .registration-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 // Map
@@ -469,22 +554,6 @@ h1, h2 {
 #fh5co-counter,
 .fh5co-cover {
   margin-bottom: 50px;
-	.display-tc {
-		display: table-cell!important;
-		vertical-align: middle;
-		h1 {
-		}
-		h2 {
-			font-size: 24px;
-      letter-spacing: 10px;
-			line-height: 1.5;
-			margin-bottom: 30px;
-			font-family: $header-font;
-			@media screen and (max-width: $screen-xs) {
-				font-size: 16px;
-			}
-		}
-	}
 }
 
 // COUNTDOWN CUSTOM
@@ -670,41 +739,6 @@ h1, h2 {
 			padding-right: 0;
 			text-align: center;
 		}
-	}
-}
-
-.fh5co-heading {
-	margin-bottom: 5em;
-	&.fh5co-heading-sm {
-		margin-bottom: 2em;
-	}
-	h2 {
-		font-size: 50px;
-		margin-bottom: 10px;
-		line-height: 1.5;
-		font-weight: bold;
-		color: $header-color;
-		font-family: $header-font;
-		@media screen and (max-width: $screen-sm){
-			font-size: 35px;
-		}
-	}
-
-  h3 {
-		color: $text-color;
-		font-family: $text-font;
-  }
-	p {
-		font-size: 18px;
-		line-height: 1.5;
-		color: $text-color;
-	}
-	span{
-		text-transform: uppercase;
-		font-size: 13px;
-		letter-spacing: 2px;
-		font-weight: 600;
-		color: rgba($brand-black,.4);
 	}
 }
 
