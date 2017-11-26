@@ -20,6 +20,131 @@ body {
   color: #BBBDC0;
   background: #fff; }
 
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em; }
+  #header h1 {
+    font-family: "Milton One", serif;
+    margin-bottom: 0px;
+    font-size: 10em;
+    line-height: 1.5;
+    white-space: nowrap; }
+    @media screen and (max-width: 768px) {
+      #header h1 {
+        font-size: 6em; } }
+    @media screen and (max-width: 480px) {
+      #header h1 {
+        font-size: 4em; } }
+  #header h2 {
+    font-size: 24px;
+    color: #C5AE87;
+    font-family: "Playfair display", serif;
+    letter-spacing: 10px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 30px; }
+    @media screen and (max-width: 480px) {
+      #header h2 {
+        font-size: 16px; } }
+
+#couple-about-each-other {
+  width: 90%;
+  margin: 0 auto;
+  position: relative; }
+  @media screen and (max-width: 768px) {
+    #couple-about-each-other {
+      width: 100%; } }
+  #couple-about-each-other a.about {
+    font-family: "Playfair display", serif;
+    color: #C5AE87;
+    font-size: 50px;
+    display: block; }
+  #couple-about-each-other .icon-minimize, #couple-about-each-other .icon-maximize {
+    display: none; }
+  #couple-about-each-other a:hover {
+    text-decoration: underline; }
+  #couple-about-each-other a.about .icon-minimize {
+    display: inline-block; }
+  #couple-about-each-other a.about .icon-maximize {
+    display: none; }
+  #couple-about-each-other a.about.collapsed .icon-maximize {
+    display: inline-block; }
+  #couple-about-each-other a.about.collapsed .icon-minimize {
+    display: none; }
+  #couple-about-each-other a[href='#aboutGroom'] {
+    text-align: end; }
+
+.couple-description .bride {
+  float: right;
+  margin-top: 150px;
+  margin-left: 50px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  width: calc(452px * 0.6662);
+  height: 452px; }
+  .couple-description .bride img {
+    width: calc(452px * 0.6662);
+    height: 452px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+  @media screen and (max-width: 480px) {
+    .couple-description .bride {
+      width: calc(240px * 0.6662);
+      height: 240px; }
+      .couple-description .bride img {
+        width: calc(240px * 0.6662);
+        height: 240px;
+        margin: 0 auto; } }
+.couple-description .desc-bride {
+  padding-top: 50px;
+  text-align: left;
+  display: table; }
+.couple-description .groom {
+  margin-top: 150px;
+  margin-right: 50px;
+  float: left;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  width: calc(452px * 0.7);
+  height: 452px; }
+  .couple-description .groom img {
+    width: calc(452px * 0.6662);
+    height: 452px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+  @media screen and (max-width: 480px) {
+    .couple-description .groom {
+      width: calc(240px * 0.6662);
+      height: 240px; }
+      .couple-description .groom img {
+        width: calc(240px * 0.6662);
+        height: 240px;
+        margin: 0 auto; } }
+.couple-description .desc-groom {
+  padding-top: 50px;
+  display: table;
+  text-align: left; }
+@media screen and (max-width: 480px) {
+  .couple-description .groom, .couple-description .bride {
+    margin-left: 0;
+    margin-right: 0; }
+  .couple-description .desc-groom {
+    padding-left: 0;
+    text-align: center; }
+  .couple-description .desc-bride {
+    padding-right: 0;
+    text-align: center; } }
+
 #page {
   position: relative;
   overflow-x: hidden;
@@ -88,49 +213,14 @@ h1, h2, h3, h4, h5, h6, figure {
   background-repeat: no-repeat;
   background-position: top center; }
 
-.fh5co-cover {
-  height: 900px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  width: 100%; }
-  .fh5co-cover .overlay {
-    z-index: 0;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5); }
-  .fh5co-cover > .fh5co-container {
-    position: relative;
-    z-index: 10; }
-  @media screen and (max-width: 768px) {
-    .fh5co-cover {
-      height: 600px; } }
-  .fh5co-cover .display-t,
-  .fh5co-cover .display-tc {
-    height: 600px;
-    display: table;
-    width: 100%; }
-    @media screen and (max-width: 768px) {
-      .fh5co-cover .display-t,
-      .fh5co-cover .display-tc {
-        height: 600px; } }
-  .fh5co-cover.fh5co-cover-sm {
-    height: 600px; }
-    @media screen and (max-width: 768px) {
-      .fh5co-cover.fh5co-cover-sm {
-        height: 400px; } }
-    .fh5co-cover.fh5co-cover-sm .display-t,
-    .fh5co-cover.fh5co-cover-sm .display-tc {
-      height: 600px;
-      display: table;
-      width: 100%; }
-      @media screen and (max-width: 768px) {
-        .fh5co-cover.fh5co-cover-sm .display-t,
-        .fh5co-cover.fh5co-cover-sm .display-tc {
-          height: 400px; } }
+.fh5co-cover .overlay {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); }
 
 #fh5co-event {
   height: 600px; }
@@ -142,17 +232,6 @@ h1, h2, h3, h4, h5, h6, figure {
     #fh5co-event .display-t .event-container,
     #fh5co-event .display-tc .event-container {
       height: 100%; }
-  #fh5co-event .fh5co-heading {
-    margin-top: 2em; }
-    #fh5co-event .fh5co-heading h2 {
-      color: #C5AE87;
-      font-family: "Playfair display", serif; }
-    #fh5co-event .fh5co-heading span {
-      color: rgba(187, 189, 192, 0.5);
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 2px;
-      font-weight: 600; }
   #fh5co-event .overlay {
     position: absolute;
     top: 0;
@@ -216,6 +295,11 @@ h1, h2, h3, h4, h5, h6, figure {
 form label {
   font-weight: normal !important; }
 
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  color: #C5AE87; }
+
 #header,
 #fh5co-counter,
 .fh5co-cover {
@@ -225,32 +309,6 @@ form label {
   .fh5co-cover .display-tc {
     display: table-cell !important;
     vertical-align: middle; }
-    #header .display-tc h1, #header .display-tc h2,
-    #fh5co-counter .display-tc h1,
-    #fh5co-counter .display-tc h2,
-    .fh5co-cover .display-tc h1,
-    .fh5co-cover .display-tc h2 {
-      margin: 0;
-      padding: 0;
-      color: #C5AE87; }
-    #header .display-tc h1,
-    #fh5co-counter .display-tc h1,
-    .fh5co-cover .display-tc h1 {
-      margin-bottom: 0px;
-      font-size: 10em;
-      line-height: 1.5;
-      font-family: "Milton One", serif;
-      white-space: nowrap; }
-      @media screen and (max-width: 768px) {
-        #header .display-tc h1,
-        #fh5co-counter .display-tc h1,
-        .fh5co-cover .display-tc h1 {
-          font-size: 6em; } }
-      @media screen and (max-width: 480px) {
-        #header .display-tc h1,
-        #fh5co-counter .display-tc h1,
-        .fh5co-cover .display-tc h1 {
-          font-size: 4em; } }
     #header .display-tc h2,
     #fh5co-counter .display-tc h2,
     .fh5co-cover .display-tc h2 {
@@ -332,14 +390,6 @@ form label {
   @media screen and (max-width: 480px) {
     .simply-countdown > .simply-section .simply-word {
       font-size: 6px; } }
-
-.couple-wrap {
-  width: 90%;
-  margin: 0 auto;
-  position: relative; }
-  @media screen and (max-width: 768px) {
-    .couple-wrap {
-      width: 100%; } }
 
 .heart {
   position: absolute;
@@ -441,81 +491,6 @@ form label {
       padding-left: 0;
       text-align: center; }
     .couple-half .desc-bride {
-      padding-right: 0;
-      text-align: center; } }
-
-.couple-description {
-  width: 100%; }
-  .couple-description h3 {
-    font-family: "Playfair display", serif;
-    color: #C5AE87;
-    font-size: 50px; }
-  .couple-description .bride {
-    float: right;
-    margin-top: 150px;
-    margin-left: 50px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-    width: calc(452px * 0.6662);
-    height: 452px; }
-    .couple-description .bride img {
-      width: calc(452px * 0.6662);
-      height: 452px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      border-radius: 50%; }
-    @media screen and (max-width: 480px) {
-      .couple-description .bride {
-        width: calc(240px * 0.6662);
-        height: 240px; }
-        .couple-description .bride img {
-          width: calc(240px * 0.6662);
-          height: 240px;
-          margin: 0 auto; } }
-  .couple-description .desc-bride {
-    padding-top: 50px;
-    text-align: left;
-    display: table; }
-  .couple-description .groom {
-    margin-top: 150px;
-    margin-right: 50px;
-    float: left;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-    width: calc(452px * 0.7);
-    height: 452px; }
-    .couple-description .groom img {
-      width: calc(452px * 0.6662);
-      height: 452px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      border-radius: 50%; }
-    @media screen and (max-width: 480px) {
-      .couple-description .groom {
-        width: calc(240px * 0.6662);
-        height: 240px; }
-        .couple-description .groom img {
-          width: calc(240px * 0.6662);
-          height: 240px;
-          margin: 0 auto; } }
-  .couple-description .desc-groom {
-    padding-top: 50px;
-    display: table;
-    text-align: left; }
-  @media screen and (max-width: 480px) {
-    .couple-description .groom, .couple-description .bride {
-      margin-left: 0;
-      margin-right: 0; }
-    .couple-description .desc-groom {
-      padding-left: 0;
-      text-align: center; }
-    .couple-description .desc-bride {
       padding-right: 0;
       text-align: center; } }
 

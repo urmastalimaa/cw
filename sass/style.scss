@@ -122,6 +122,171 @@ body {
 	color: $text-color;
 	background: #fff;
 }
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2em;
+
+  h1 {
+    font-family: $main-header-font;
+    margin-bottom: 0px;
+    font-size: 10em;
+    line-height: 1.5;
+    white-space: nowrap;
+    @media screen and (max-width: $screen-sm) {
+      font-size: 6em;
+    }
+    @media screen and (max-width: $screen-xs) {
+      font-size: 4em;
+    }
+  }
+    
+  h2 {
+    font-size: 24px;
+    color: $header-color;
+    font-family: $header-font;
+    letter-spacing: 10px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $screen-xs) {
+      font-size: 16px;
+    }
+  }
+}
+
+#couple-about-each-other {
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+	@media screen and (max-width: $screen-sm){
+		width: 100%;
+	}
+
+  a.about {
+    font-family: $header-font;
+    color: $header-color;
+    font-size: 50px;
+    display: block;
+  }
+
+  .icon-minimize, .icon-maximize {
+    display: none
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a.about {
+    .icon-minimize {
+      display: inline-block;
+    }
+    .icon-maximize {
+      display: none
+    }
+  }
+
+  a.about.collapsed {
+    .icon-maximize {
+      display: inline-block;
+    }
+    .icon-minimize {
+      display: none;
+    }
+  }
+
+  a[href='#aboutGroom'] {
+    text-align: end;
+  }
+
+}
+
+.couple-description {
+  $bride-aspect-ratio: 0.6662;
+  $groom-aspect-ratio: 0.7;
+  $big-height: 452px;
+  $small-height: 240px;
+
+  .bride {
+    float: right;
+    margin-top: 150px;
+    margin-left: 50px;
+    @include border-radius(50%);
+    width: calc(#{$big-height} * #{$bride-aspect-ratio});
+    height: $big-height;
+    img{
+      width: calc(#{$big-height} * #{$bride-aspect-ratio});
+      height: $big-height;
+      @include border-radius(50%);
+    }
+    @media screen and (max-width: $screen-xs){
+      width: calc(#{$small-height} * #{$bride-aspect-ratio});
+      height: $small-height;
+      img{
+        width: calc(#{$small-height} * #{$bride-aspect-ratio});
+        height: $small-height;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .desc-bride {
+    padding-top: 50px;
+    text-align: left;
+    display: table;
+  }
+
+  .groom {
+    margin-top: 150px;
+    margin-right: 50px;
+    float: left;
+    @include border-radius(50%);
+    width: calc(#{$big-height} * #{$groom-aspect-ratio});
+    height: $big-height;
+    img{
+      width: calc(#{$big-height} * #{$bride-aspect-ratio});
+      height: $big-height;
+      @include border-radius(50%);
+    }
+    @media screen and (max-width: $screen-xs){
+      width: calc(#{$small-height} * #{$bride-aspect-ratio});
+      height: $small-height;
+      img{
+        width: calc(#{$small-height} * #{$bride-aspect-ratio});
+        height: $small-height;
+        margin: 0 auto;
+
+      }
+    }
+  }
+
+  .desc-groom {
+    padding-top: 50px;
+    display: table;
+    text-align: left;
+  }
+
+  @media screen and (max-width: $screen-xs){
+    .groom, .bride {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .desc-groom {
+      padding-left: 0;
+      text-align: center;
+    }
+    .desc-bride {
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+}
+
 #page {
 	position: relative;
 	overflow-x: hidden;
@@ -195,12 +360,6 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 .fh5co-cover {
-	height: 900px;
-	background-size: cover;
-	// background-position: center center;
-	background-repeat: no-repeat;
-	position: relative;
-	width: 100%;
 	.overlay {
 		z-index:0;
 		position: absolute;
@@ -209,38 +368,6 @@ h1, h2, h3, h4, h5, h6, figure {
 		left: 0;
 		right: 0;
 		background: rgba(0, 0, 0, .5);
-	}
-	> .fh5co-container {
-		position: relative;
-		z-index: 10;
-	}
-	@media screen and (max-width: $screen-sm) {
-		height: 600px;
-	}
-	.display-t,
-	.display-tc {
-		height: 600px;
-		display: table;
-		width: 100%;
-		@media screen and (max-width: $screen-sm) {
-			height: 600px;
-		}
-	}	
-
-	&.fh5co-cover-sm {
-		height: 600px;
-		@media screen and (max-width: $screen-sm) {
-			height: 400px;
-		}
-		.display-t,
-		.display-tc {
-			height: 600px;
-			display: table;
-			width: 100%;
-			@media screen and (max-width: $screen-sm) {
-				height: 400px;
-			}
-		}	
 	}
 }
 
@@ -256,18 +383,6 @@ h1, h2, h3, h4, h5, h6, figure {
     }
 	}
 	.fh5co-heading{
-    margin-top: 2em;
-		h2{
-			color: $header-color;
-      font-family: $header-font;
-		}
-		span{
-			color: rgba($text-color,.5);
-			text-transform: uppercase;
-			font-size: 13px;
-			letter-spacing: 2px;
-			font-weight: 600;
-		}
 	}
 	.overlay {
 		position: absolute;
@@ -344,6 +459,12 @@ form {
 	}
 }
 
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  color: $header-color;
+}
+
 #header,
 #fh5co-counter,
 .fh5co-cover {
@@ -351,23 +472,7 @@ form {
 	.display-tc {
 		display: table-cell!important;
 		vertical-align: middle;
-		h1, h2 {
-			margin: 0;
-			padding: 0;
-			color: $header-color;
-		}
 		h1 {
-			margin-bottom: 0px;
-			font-size: 10em;
-			line-height: 1.5;
-			font-family: $main-header-font;
-      white-space: nowrap;
-			@media screen and (max-width: $screen-sm) {
-				font-size: 6em;
-			}
-			@media screen and (max-width: $screen-xs) {
-				font-size: 4em;
-			}
 		}
 		h2 {
 			font-size: 24px;
@@ -454,14 +559,6 @@ form {
 }
 
 // COUPLE
-.couple-wrap{
-	width: 90%;
-	margin: 0 auto;
-	position: relative;
-	@media screen and (max-width: $screen-sm){
-		width: 100%;
-	}
-}
 .heart{
 	position: absolute;
 	top: 4em;
@@ -558,90 +655,6 @@ form {
 	}
 	.desc-groom{
 		padding-left: 180px;
-		text-align: left;
-	}
-	@media screen and (max-width: $screen-xs){
-		.groom,.bride{
-			margin-left: 0;
-			margin-right: 0;
-		}
-		.desc-groom{
-			padding-left: 0;
-			text-align: center;
-		}
-		.desc-bride{
-			padding-right: 0;
-			text-align: center;
-		}
-	}
-}
-
-.couple-description {
-  width: 100%;
-
-	h3{
-		font-family: $header-font;
-		color: $header-color;
-		font-size: 50px;
-	}
-  $bride-aspect-ratio: 0.6662;
-  $groom-aspect-ratio: 0.7;
-  $big-height: 452px;
-  $small-height: 240px;
-
-	.bride{
-		float: right;
-    margin-top: 150px;
-    margin-left: 50px;
-		@include border-radius(50%);
-    width: calc(#{$big-height} * #{$bride-aspect-ratio});
-		height: $big-height;
-		img{
-      width: calc(#{$big-height} * #{$bride-aspect-ratio});
-			height: $big-height;
-			@include border-radius(50%);
-		}
-		@media screen and (max-width: $screen-xs){
-      width: calc(#{$small-height} * #{$bride-aspect-ratio});
-			height: $small-height;
-			img{
-        width: calc(#{$small-height} * #{$bride-aspect-ratio});
-				height: $small-height;
-				margin: 0 auto;
-			}
-		}
-	}
-	.desc-bride{
-    padding-top: 50px;
-		text-align: left;
-    display: table;
-	}
-	.groom{
-    margin-top: 150px;
-    margin-right: 50px;
-		float: left;
-		@include border-radius(50%);
-		width: calc(#{$big-height} * #{$groom-aspect-ratio});
-		height: $big-height;
-		img{
-      width: calc(#{$big-height} * #{$bride-aspect-ratio});
-			height: $big-height;
-			@include border-radius(50%);
-		}
-		@media screen and (max-width: $screen-xs){
-      width: calc(#{$small-height} * #{$bride-aspect-ratio});
-			height: $small-height;
-			img{
-        width: calc(#{$small-height} * #{$bride-aspect-ratio});
-				height: $small-height;
-				margin: 0 auto;
-
-			}
-		}
-	}
-	.desc-groom{
-    padding-top: 50px;
-    display: table;
 		text-align: left;
 	}
 	@media screen and (max-width: $screen-xs){
