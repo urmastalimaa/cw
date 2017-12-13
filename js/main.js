@@ -28,39 +28,42 @@
     $("#rsvp-form select,input,textarea").prop('disabled', false);
   }
 
+  function gatherChoices(containerSelector) {
+    return $(containerSelector)
+      .find("input")
+      .filter(function(_index, input) { return $(input).is(":checked") })
+      .map(function(_index, input) { return input.name })
+      .toArray()
+  }
+
   function gatherFormData() {
     var $target = $("#rsvp-form");
     return {
-      nimi: $target.find("#inputName").val(),
-      osalemine: $target.find("#inputOsalemine option:selected").text(),
-      saabumine: $target.find("#inputSaabumine option:selected").text(),
-      lahkumine: $target.find("#inputLahkumine option:selected").text(),
-      erisoovid: $target.find("#inputErisoovid").val(),
-      _next: "/form/thanks.html"
+      Name: $target.find("#inputName").val(),
+      Participation: $target.find("#inputParticipation option:selected").text(),
+      Transportation: $target.find("#inputTransportation option:selected").text(),
+      MainCourse: gatherChoices("#mainCourseChoices")
     };
   }
 
-  $.extend(
-{
-    redirectPost: function(location, args)
-    {
-        var form = $('<form></form>');
-        form.attr("method", "post");
-        form.attr("action", location);
 
-        $.each( args, function( key, value ) {
-            var field = $('<input></input>');
+  function onRsvpSuccess() {
+    localStorage[rsvpSubmissionKey] = "true";
+    $("#formResult")
+      .removeClass("alert-danger")
+      .addClass("alert-success")
+      .text("Aitäh! Sinu registreerimine on salvestatud")
+      .show();
+    disableRsvpForm();
+  }
 
-            field.attr("type", "hidden");
-            field.attr("name", key);
-            field.attr("value", value);
-
-            form.append(field);
-        });
-        $(form).appendTo('body').submit();
-    }
-});
-
+  function onRsvpFail() {
+    $("#formResult")
+      .removeClass("alert-success")
+      .addClass("alert-danger")
+      .text("Registreerimisel tekkis viga. Proovi hiljem uuesti")
+      .show();
+  }
 
   function setupForm() {
     if (localStorage[rsvpSubmissionKey] === "true") {
@@ -77,11 +80,20 @@
     }
 
     $("#rsvp-form").validator().on('submit', function(event){
-      var formTargetURL = "https://formspree.io/reinumagi.dagmar@gmail.com";
+      // Silly obfuscation
+      var baseURL = atob("aHR0cHM6Ly82MXZzdDh6c3BpLmV4ZWN1dGUtYXBpLmV1LXdlc3QtMS5hbWF6b25hd3MuY29tL3Byb2Q=")
+      var formTargetURL = baseURL + "/rsvp";
       if (!event.isDefaultPrevented()) {
         event.preventDefault();
-        localStorage[rsvpSubmissionKey] = "true";
-        $.redirectPost(formTargetURL, gatherFormData());
+
+        $.ajax({
+          type: "POST",
+          contentType: "application/json; charset=utf-8",
+          url: formTargetURL,
+          data: JSON.stringify(gatherFormData()),
+          crossDomain: true,
+          dataType: 'json'
+        }).then(onRsvpSuccess, onRsvpFail);
       }
     });
   }
