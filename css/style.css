@@ -1,6 +1,12 @@
 @font-face {
-  font-family: 'Milton One';
-  src: url("../fonts/MiltonOneBold.woff") format("woff"), url("../fonts/MiltonOneBold.ttf") format("truetype"); }
+  font-family: 'Montserrat Italic';
+  src: url("../fonts/Montserrat-Italic.otf") format("opentype"); }
+@font-face {
+  font-family: 'Montserrat LightItalic';
+  src: url("../fonts/Montserrat-LightItalic.otf") format("opentype"); }
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url("../fonts/Montserrat-Regular.otf") format("opentype"); }
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -13,11 +19,11 @@
 *
 * ======================================================= */
 body {
-  font-family: "Times new Roman", Arial, serif;
+  font-family: "Montserrat Regular";
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #BBBDC0;
+  color: #948030;
   background: #fff; }
 
 .heading {
@@ -29,18 +35,18 @@ body {
     margin-bottom: 10px;
     line-height: 1.5;
     font-weight: bold;
-    color: #C5AE87;
-    font-family: "Playfair display", serif; }
+    color: #948030;
+    font-family: "Montserrat Italic"; }
     @media screen and (max-width: 768px) {
       .heading h2 {
         font-size: 35px; } }
   .heading h3 {
-    color: #BBBDC0;
-    font-family: "Times new Roman", Arial, serif; }
+    color: #948030;
+    font-family: "Montserrat Regular"; }
   .heading p {
     font-size: 18px;
     line-height: 1.5;
-    color: #BBBDC0; }
+    color: #948030; }
   .heading span {
     text-transform: uppercase;
     font-size: 13px;
@@ -48,61 +54,70 @@ body {
     font-weight: 600;
     color: rgba(0, 0, 0, 0.4); }
 
+#page {
+  background-image: url("../images/LiisaNick.jpg");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
 #header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2em; }
-  #header h1 {
-    font-family: "Milton One", serif;
-    margin-bottom: 0px;
-    font-size: 10em;
-    line-height: 1.5;
-    white-space: nowrap; }
-    @media screen and (max-width: 768px) {
-      #header h1 {
-        font-size: 6em; } }
-    @media screen and (max-width: 480px) {
-      #header h1 {
-        font-size: 4em; } }
-  #header h2 {
-    font-size: 24px;
-    color: #C5AE87;
-    font-family: "Playfair display", serif;
-    letter-spacing: 10px;
-    font-weight: 600;
-    line-height: 1.5;
-    margin-bottom: 30px; }
-    @media screen and (max-width: 480px) {
-      #header h2 {
-        font-size: 16px; } }
+  height: 600px;
+  width: 90%;
+  margin-top: 2em;
+  align-self: center; }
+  #header .header-img {
+    width: 800px;
+    height: 100px; }
 
 #couple-about-each-other {
   width: 90%;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  z-index: auto;
+  box-shadow: 3px 3px lightgray;
+  padding: 50px 100px 100px; }
   @media screen and (max-width: 768px) {
     #couple-about-each-other {
       width: 100%; } }
-  #couple-about-each-other a.about {
-    font-family: "Playfair display", serif;
-    color: #C5AE87;
-    font-size: 50px;
+  #couple-about-each-other .simply-countdown {
     display: block; }
-  #couple-about-each-other .icon-minimize, #couple-about-each-other .icon-maximize {
-    display: none; }
-  #couple-about-each-other a:hover {
-    text-decoration: underline; }
-  #couple-about-each-other a.about .icon-minimize {
-    display: inline-block; }
-  #couple-about-each-other a.about .icon-maximize {
-    display: none; }
-  #couple-about-each-other a.about.collapsed .icon-maximize {
-    display: inline-block; }
-  #couple-about-each-other a.about.collapsed .icon-minimize {
-    display: none; }
-  #couple-about-each-other a[href='#aboutGroom'] {
-    text-align: end; }
+
+#descriptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+#couple-about-each-other .description {
+  width: 100%;
+  height: 75px; }
+#couple-about-each-other .picture {
+  width: 100%;
+  height: 350px; }
+#couple-about-each-other .text {
+  font-family: 'Montserrat Regular';
+  text-transform: uppercase;
+  padding: 5px;
+  border-style: solid;
+  border-width: 3px;
+  height: 152px; }
+
+#couple-about-each-other #aboutBride {
+  width: 35%; }
+
+#couple-about-each-other #aboutGroom {
+  width: 35%; }
+
+#couple-about-each-other .monogram {
+  width: 30%;
+  height: 200px;
+  padding: 20px;
+  align-self: center; }
 
 .couple-description .bride {
   float: right;
@@ -129,49 +144,6 @@ body {
         width: calc(240px * 0.6662);
         height: 240px;
         margin: 0 auto; } }
-.couple-description .desc-bride {
-  padding-top: 50px;
-  text-align: left;
-  display: table; }
-.couple-description .groom {
-  margin-top: 150px;
-  margin-right: 50px;
-  float: left;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  width: calc(452px * 0.7);
-  height: 452px; }
-  .couple-description .groom img {
-    width: calc(452px * 0.6662);
-    height: 452px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%; }
-  @media screen and (max-width: 480px) {
-    .couple-description .groom {
-      width: calc(240px * 0.6662);
-      height: 240px; }
-      .couple-description .groom img {
-        width: calc(240px * 0.6662);
-        height: 240px;
-        margin: 0 auto; } }
-.couple-description .desc-groom {
-  padding-top: 50px;
-  display: table;
-  text-align: left; }
-@media screen and (max-width: 480px) {
-  .couple-description .groom, .couple-description .bride {
-    margin-left: 0;
-    margin-right: 0; }
-  .couple-description .desc-groom {
-    padding-left: 0;
-    text-align: center; }
-  .couple-description .desc-bride {
-    padding-right: 0;
-    text-align: center; } }
 
 #timeline {
   margin-top: 2em;
@@ -221,8 +193,8 @@ p {
   margin-bottom: 20px; }
 
 h1, h2, h3, h4, h5, h6, figure {
-  color: #C5AE87;
-  font-family: "Playfair display", serif;
+  color: #948030;
+  font-family: "Montserrat Italic";
   font-weight: 400;
   margin: 0 0 20px 0; }
 
@@ -266,7 +238,7 @@ h1, h2, h3, h4, h5, h6, figure {
   align-items: center; }
   #timeline .event-and-time {
     white-space: nowrap;
-    border-bottom: 1px solid rgba(187, 189, 192, 0.5);
+    border-bottom: 1px solid rgba(148, 128, 48, 0.5);
     margin-bottom: 1em; }
   #timeline .overlay {
     position: absolute;
@@ -280,7 +252,7 @@ h1, h2, h3, h4, h5, h6, figure {
       height: inherit;
       padding: 7em 0; } }
   #timeline .event-wrap {
-    border: 2px solid rgba(187, 189, 192, 0.5);
+    border: 2px solid rgba(148, 128, 48, 0.5);
     padding: 30px;
     width: 100%;
     height: 60%;
@@ -295,21 +267,21 @@ h1, h2, h3, h4, h5, h6, figure {
     #timeline .event-wrap h3 {
       font-size: 28px;
       font-weight: 700;
-      color: #C5AE87;
-      font-family: "Playfair display", serif;
+      color: #948030;
+      font-family: "Montserrat Italic";
       display: inline-block;
       padding-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 2px; }
     #timeline .event-wrap p, #timeline .event-wrap span {
       display: inline-block;
-      color: rgba(187, 189, 192, 0.8);
-      font-family: "Times new Roman", Arial, serif;
+      color: rgba(148, 128, 48, 0.8);
+      font-family: "Montserrat Regular";
       font-size: 18px;
-      text-shadow: 0px 0px #BBBDC0; }
+      text-shadow: 0px 0px #948030; }
     #timeline .event-wrap i {
-      color: #bbbdc0;
-      font-family: "Times new Roman", Arial, serif;
+      color: #948030;
+      font-family: "Montserrat Regular";
       font-size: 24px; }
 
 #accomodation {
@@ -362,7 +334,7 @@ form label {
 h1, h2 {
   margin: 0;
   padding: 0;
-  color: #C5AE87; }
+  color: #948030; }
 
 #header,
 #fh5co-counter,
@@ -448,7 +420,7 @@ h1, h2 {
     font-size: 20px;
     background: #fff;
     padding: 20px;
-    color: #C5AE87;
+    color: #948030;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -472,8 +444,8 @@ h1, h2 {
     .couple-half {
       width: 100%; } }
   .couple-half h3 {
-    font-family: "Playfair display", serif;
-    color: #C5AE87;
+    font-family: "Montserrat Italic";
+    color: #948030;
     font-size: 30px; }
   .couple-half .bride {
     float: right;
@@ -544,8 +516,8 @@ h1, h2 {
   margin-bottom: 2em; }
 
 #registrationQuery {
-  font-family: "Times new Roman", Arial, serif;
-  color: #BBBDC0;
+  font-family: "Montserrat Regular";
+  color: #948030;
   font-size: 22px;
   text-shadow: 0px 0px 0px; }
 
@@ -553,14 +525,14 @@ h1, h2 {
   position: relative;
   margin-bottom: 2em; }
   #what-to-bring .fh5co-heading h2 {
-    color: #C5AE87;
-    font-family: "Playfair display", serif; }
+    color: #948030;
+    font-family: "Montserrat Italic"; }
   #what-to-bring .fh5co-heading p {
     line-height: 2.5;
-    color: #BBBDC0;
+    color: #948030;
     font-size: 22px;
     text-shadow: 0px 0px 0px;
-    font-family: "Times new Roman", Arial, serif; }
+    font-family: "Montserrat Regular"; }
   #what-to-bring .fh5co-heading {
     margin-bottom: 2em; }
     #what-to-bring .fh5co-heading h2 {
@@ -576,14 +548,14 @@ div:after {
   clear: both;
   padding: 2em 0;
   text-align: center;
-  color: #BBBDC0;
-  font-family: "Times new Roman", Arial, serif;
+  color: #948030;
+  font-family: "Montserrat Regular";
   font-size: 24px; }
 
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Times new Roman", Arial, serif;
+  font-family: "Montserrat Regular";
   font-size: 16px;
   font-weight: 400;
   -webkit-border-radius: 30px;
@@ -603,7 +575,7 @@ div:after {
     outline: none !important; }
 
 .btn-primary {
-  background: #BBBDC0;
+  background: #948030;
   color: #fff;
   border: 2px solid #C5AE87; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {

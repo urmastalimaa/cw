@@ -1,16 +1,23 @@
 @font-face {
-  font-family: 'Milton One';
-  src: url('../fonts/MiltonOneBold.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/MiltonOneBold.ttf')  format('truetype') /* Safari, Android, iOS */
+  font-family: 'Montserrat Italic';
+  src: url('../fonts/Montserrat-Italic.otf') format('opentype')
+}
+@font-face {
+  font-family: 'Montserrat LightItalic';
+  src: url('../fonts/Montserrat-LightItalic.otf') format('opentype')
+}
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('../fonts/Montserrat-Regular.otf') format('opentype')
 }
 
-$main-header-font: 'Milton One', serif;
-$header-font: 'Playfair display', serif;
-$text-font: 'Times new Roman', Arial, serif;
+$main-header-font: 'Montserrat LightItalic';
+$header-font: 'Montserrat Italic';
+$text-font: 'Montserrat Regular';
 
 
-$header-color: #C5AE87;
-$text-color: #BBBDC0;
+$header-color: #948030;
+$text-color: #948030;
 
 // Overrides
 $grid-gutter-width: 40px !default; 
@@ -158,88 +165,90 @@ body {
 	}
 }
 
+#page {
+  background-image:url('../images/LiisaNick.jpg');
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 
 #header {
   display: flex;
   flex-direction: column;
   align-items: center;
 
+
+  height: 600px;
+  width: 90%;
+  .header-img {
+    width: 800px;
+    height: 100px;
+  }
   margin-top: 2em;
-
-  h1 {
-    font-family: $main-header-font;
-    margin-bottom: 0px;
-    font-size: 10em;
-    line-height: 1.5;
-    white-space: nowrap;
-    @media screen and (max-width: $screen-sm) {
-      font-size: 6em;
-    }
-    @media screen and (max-width: $screen-xs) {
-      font-size: 4em;
-    }
-  }
-    
-  h2 {
-    font-size: 24px;
-    color: $header-color;
-    font-family: $header-font;
-    letter-spacing: 10px;
-    font-weight: 600;
-    line-height: 1.5;
-    margin-bottom: 30px;
-
-    @media screen and (max-width: $screen-xs) {
-      font-size: 16px;
-    }
-  }
+  align-self: center;
 }
 
 #couple-about-each-other {
 	width: 90%;
 	margin: 0 auto;
 	position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  z-index: auto;
+  box-shadow: 3px 3px lightgray;
+  padding: 50px 100px 100px;
 	@media screen and (max-width: $screen-sm){
 		width: 100%;
 	}
-
-  a.about {
-    font-family: $header-font;
-    color: $header-color;
-    font-size: 50px;
+  
+  .simply-countdown {
     display: block;
   }
 
-  .icon-minimize, .icon-maximize {
-    display: none
+}
+
+#descriptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#couple-about-each-other {
+  .description {
+    width: 100%;
+    height: 75px;
   }
 
-  a:hover {
-    text-decoration: underline;
+  .picture {
+    width: 100%;
+    height: 350px;
   }
 
-  a.about {
-    .icon-minimize {
-      display: inline-block;
-    }
-    .icon-maximize {
-      display: none
-    }
+  .text {
+    font-family: 'Montserrat Regular';
+    text-transform: uppercase;
+    padding: 5px;
+    border-style: solid;
+    border-width: 3px;
+    height: 152px;
   }
+}
 
-  a.about.collapsed {
-    .icon-maximize {
-      display: inline-block;
-    }
-    .icon-minimize {
-      display: none;
-    }
-  }
+#couple-about-each-other #aboutBride {
+  width: 35%;
+}
 
-  a[href='#aboutGroom'] {
-    text-align: end;
-  }
+#couple-about-each-other #aboutGroom {
+  width: 35%;
+}
 
+#couple-about-each-other .monogram {
+  width: 30%;
+  height: 200px;
+  padding: 20px;
+  align-self: center;
 }
 
 .couple-description {
@@ -268,57 +277,6 @@ body {
         height: $small-height;
         margin: 0 auto;
       }
-    }
-  }
-
-  .desc-bride {
-    padding-top: 50px;
-    text-align: left;
-    display: table;
-  }
-
-  .groom {
-    margin-top: 150px;
-    margin-right: 50px;
-    float: left;
-    @include border-radius(50%);
-    width: calc(#{$big-height} * #{$groom-aspect-ratio});
-    height: $big-height;
-    img{
-      width: calc(#{$big-height} * #{$bride-aspect-ratio});
-      height: $big-height;
-      @include border-radius(50%);
-    }
-    @media screen and (max-width: $screen-xs){
-      width: calc(#{$small-height} * #{$bride-aspect-ratio});
-      height: $small-height;
-      img{
-        width: calc(#{$small-height} * #{$bride-aspect-ratio});
-        height: $small-height;
-        margin: 0 auto;
-
-      }
-    }
-  }
-
-  .desc-groom {
-    padding-top: 50px;
-    display: table;
-    text-align: left;
-  }
-
-  @media screen and (max-width: $screen-xs){
-    .groom, .bride {
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .desc-groom {
-      padding-left: 0;
-      text-align: center;
-    }
-    .desc-bride {
-      padding-right: 0;
-      text-align: center;
     }
   }
 }
