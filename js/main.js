@@ -52,7 +52,7 @@
     $("#formResult")
       .removeClass("alert-danger")
       .addClass("alert-success")
-      .text("Aitäh! Sinu registreerimine on salvestatud")
+      .text("Thank you")
       .show();
     disableRsvpForm();
   }
@@ -61,14 +61,14 @@
     $("#formResult")
       .removeClass("alert-success")
       .addClass("alert-danger")
-      .text("Registreerimisel tekkis viga. Proovi hiljem uuesti")
+      .text("There was an error with sending the RSVP. Please try again later.")
       .show();
   }
 
   function setupForm() {
     if (localStorage[rsvpSubmissionKey] === "true") {
       $("#registrationQuery")
-        .text("Sinu registreerimine on salvestatud")
+        .text("RSVP successfully sent")
         .addClass("alert-success");
       disableRsvpForm();
       $('button#clear').on('click', function(event) {
