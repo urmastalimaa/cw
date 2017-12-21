@@ -206,13 +206,16 @@ body {
   align-items: center;
 
 
-  height: 600px;
-  width: 90%;
-  .header-img {
-    width: 800px;
-    height: 100px;
+  height: 50em;
+
+  @media screen and (max-width: $screen-sm) {
+    height: 10em;
   }
-  margin-top: 2em;
+  width: 60%;
+  img {
+    width: 100%;
+  }
+  margin-top: 0.5em;
   align-self: center;
 }
 
@@ -225,10 +228,7 @@ body {
   background-color: white;
   z-index: auto;
   box-shadow: 3px 3px lightgray;
-  padding: 50px 100px 100px;
-	@media screen and (max-width: $screen-sm){
-		width: 100%;
-	}
+  padding: 2em;
   
   .simply-countdown {
     display: block;
@@ -245,12 +245,10 @@ body {
 #couple-about-each-other {
   .description {
     width: 100%;
-    height: 75px;
   }
 
   .picture {
     width: 100%;
-    height: 350px;
   }
 
   .text {
@@ -264,6 +262,10 @@ body {
     border-style: solid;
     border-width: 3px;
     height: 152px;
+    font-size: 1em;
+    @media screen and (max-width: $screen-sm) {
+      font-size: 0.5em;
+    }
   }
 
   .read-more {
@@ -273,18 +275,17 @@ body {
 }
 
 #couple-about-each-other #aboutBride {
-  width: 35%;
+  width: 40%;
 }
 
 #couple-about-each-other #aboutGroom {
-  width: 35%;
+  width: 40%;
 }
 
 #couple-about-each-other .monogram {
-  width: 30%;
-  height: 200px;
-  padding: 20px;
-  align-self: center;
+  width: 20%;
+  align-self: baseline;
+  margin-top: 3em;
 }
 
 #timeline {
@@ -308,7 +309,7 @@ body {
   margin-top: 2em;
   margin-bottom: 2em;
   h2 {
-    font-size: 40px;
+    font-size: 1em;
     text-align: center;
     line-height: 1.5;
     white-space: nowrap;
@@ -317,6 +318,7 @@ body {
 
 #timeline .items {
   background-image: url('../images/background - pastel.png');
+  width: 80%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -324,37 +326,54 @@ body {
 
 #timeline .item {
   background-color: white;
-  padding: 50px 15px 50px;
-  margin: 50px 10px 10px 50px;
+  padding: 2em 20px;
+  margin: 2em 10px;
   flex-basis: 40%;
+  @media screen and (max-width: $screen-sm) {
+    flex-basis: 100%;
+  }
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: space-between;
+  align-items: center;
+
+  .row {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 1em;
+  }
 
   .header {
     text-transform: uppercase;
-    font-size: 25px;
-    margin: 5px;
+    font-size: 1em;
+    margin: 0.25em;
     flex-basis: 40%;
   }
 
   .time {
     flex-grow: 2;
-    font-size: 25px;
+    font-size: 1em;
     display: flex;
     flex-direction: row;
     justify-content: end;
-    padding: 10px;
+    align-items: center;
   }
 
   .clock {
-    width: 46.5px;
-    height: 46.5px;
-    margin: 0px 20px 0px 20px;
+    @media screen and (max-width: $screen-sm) {
+      display: none;
+    }
+    width: 25%;
+    margin-right: 1em;
   }
 
   .description {
-    font-size: 20px;
+    font-size: 1em;
+    @media screen and (max-width: $screen-sm) {
+      font-size: 0.5em;
+    }
   }
 
   .item-img {
@@ -509,6 +528,16 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-top: 2em;
   width: 60%;
   align-self: center;
+
+}
+
+#getting-there {
+  .prices {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 #flowers {
@@ -555,6 +584,9 @@ h1, h2, h3, h4, h5, h6, figure {
 
   #rsvp-form {
     width: 50%;
+    @media screen and (max-width: $screen-sm) {
+      width: 80%;
+    }
 
     img {
       width: 30px;
@@ -581,7 +613,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
-#save-the-date {
+#video {
   margin: 50px 0px 50px 0px;
   display: flex;
   flex-direction: column;

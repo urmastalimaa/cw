@@ -91,13 +91,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 600px;
-  width: 90%;
-  margin-top: 2em;
+  height: 50em;
+  width: 60%;
+  margin-top: 0.5em;
   align-self: center; }
-  #header .header-img {
-    width: 800px;
-    height: 100px; }
+  @media screen and (max-width: 768px) {
+    #header {
+      height: 10em; } }
+  #header img {
+    width: 100%; }
 
 #couple-about-each-other {
   width: 90%;
@@ -108,10 +110,7 @@ body {
   background-color: white;
   z-index: auto;
   box-shadow: 3px 3px lightgray;
-  padding: 50px 100px 100px; }
-  @media screen and (max-width: 768px) {
-    #couple-about-each-other {
-      width: 100%; } }
+  padding: 2em; }
   #couple-about-each-other .simply-countdown {
     display: block; }
 
@@ -121,11 +120,9 @@ body {
   justify-content: center; }
 
 #couple-about-each-other .description {
-  width: 100%;
-  height: 75px; }
+  width: 100%; }
 #couple-about-each-other .picture {
-  width: 100%;
-  height: 350px; }
+  width: 100%; }
 #couple-about-each-other .text {
   display: flex;
   flex-direction: column;
@@ -135,22 +132,25 @@ body {
   padding: 5px;
   border-style: solid;
   border-width: 3px;
-  height: 152px; }
+  height: 152px;
+  font-size: 1em; }
+  @media screen and (max-width: 768px) {
+    #couple-about-each-other .text {
+      font-size: 0.5em; } }
 #couple-about-each-other .read-more {
   width: 30%;
   text-align: center; }
 
 #couple-about-each-other #aboutBride {
-  width: 35%; }
+  width: 40%; }
 
 #couple-about-each-other #aboutGroom {
-  width: 35%; }
+  width: 40%; }
 
 #couple-about-each-other .monogram {
-  width: 30%;
-  height: 200px;
-  padding: 20px;
-  align-self: center; }
+  width: 20%;
+  align-self: baseline;
+  margin-top: 3em; }
 
 #timeline {
   display: flex;
@@ -168,43 +168,59 @@ body {
     align-self: center;
     flex-grow: 2; }
   #timeline h2 {
-    font-size: 40px;
+    font-size: 1em;
     text-align: center;
     line-height: 1.5;
     white-space: nowrap; }
 
 #timeline .items {
   background-image: url("../images/background - pastel.png");
+  width: 80%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around; }
 
 #timeline .item {
   background-color: white;
-  padding: 50px 15px 50px;
-  margin: 50px 10px 10px 50px;
+  padding: 2em 20px;
+  margin: 2em 10px;
   flex-basis: 40%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between; }
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    #timeline .item {
+      flex-basis: 100%; } }
+  #timeline .item .row {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 1em; }
   #timeline .item .header {
     text-transform: uppercase;
-    font-size: 25px;
-    margin: 5px;
+    font-size: 1em;
+    margin: 0.25em;
     flex-basis: 40%; }
   #timeline .item .time {
     flex-grow: 2;
-    font-size: 25px;
+    font-size: 1em;
     display: flex;
     flex-direction: row;
     justify-content: end;
-    padding: 10px; }
+    align-items: center; }
   #timeline .item .clock {
-    width: 46.5px;
-    height: 46.5px;
-    margin: 0px 20px 0px 20px; }
+    width: 25%;
+    margin-right: 1em; }
+    @media screen and (max-width: 768px) {
+      #timeline .item .clock {
+        display: none; } }
   #timeline .item .description {
-    font-size: 20px; }
+    font-size: 1em; }
+    @media screen and (max-width: 768px) {
+      #timeline .item .description {
+        font-size: 0.5em; } }
   #timeline .item .item-img {
     width: 40px;
     height: 35px;
@@ -321,6 +337,12 @@ h1, h2, h3, h4, h5, h6, figure {
     text-align: center;
     margin-bottom: 1em; }
 
+#getting-there .prices {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 #flowers {
   margin-top: 2em;
   width: 60%;
@@ -354,6 +376,9 @@ h1, h2, h3, h4, h5, h6, figure {
     margin-bottom: 1em; }
   #registration #rsvp-form {
     width: 50%; }
+    @media screen and (max-width: 768px) {
+      #registration #rsvp-form {
+        width: 80%; } }
     #registration #rsvp-form img {
       width: 30px; }
     #registration #rsvp-form .form-group {
@@ -370,14 +395,14 @@ h1, h2, h3, h4, h5, h6, figure {
     border: 2px solid #948030;
     border-radius: 15px; }
 
-#save-the-date {
+#video {
   margin: 50px 0px 50px 0px;
   display: flex;
   flex-direction: column;
   align-items: center; }
-  #save-the-date iframe {
+  #video iframe {
     margin-bottom: 50px; }
-  #save-the-date img {
+  #video img {
     width: 80%; }
 
 h1, h2 {
