@@ -396,11 +396,41 @@ body {
   .button {
     width: 50%;
   }
+
+  .map {
+    width: 100%;
+  }
 }
 
+#what-to-bring {
+  background-image: url('../images/background - pastel photo of Nick and Liisa.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+}
+
+#flowers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 40%;
+    display: block;
+  }
+}
+
+.poem {
+  font-family: 'Montserrat LightItalic';
+  line-height: 1;
+  p { 
+    margin: 0px;
+  }
 }
 
 

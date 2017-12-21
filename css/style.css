@@ -232,9 +232,32 @@ body {
   flex-basis: 80%; }
 #getting-there .button {
   width: 50%; }
-
-.map {
+#getting-there .map {
   width: 100%; }
+
+#what-to-bring {
+  background-image: url("../images/background - pastel photo of Nick and Liisa.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; }
+
+#flowers {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #flowers img {
+    width: 40%;
+    display: block; }
+
+.poem {
+  font-family: 'Montserrat LightItalic';
+  line-height: 1; }
+  .poem p {
+    margin: 0px; }
 
 a {
   color: #C5AE87;
