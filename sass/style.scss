@@ -172,6 +172,33 @@ body {
   background-repeat: no-repeat;
 }
 
+#page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	position: relative;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+	@include transition(.5s);
+	.offcanvas & {
+		overflow: hidden;	
+		position: absolute;
+		
+		&:after {
+			@include transition(2s);
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 101;
+			background: rgba(0,0,0,.7);
+			content: "";
+		}
+	}
+}
+
 
 #header {
   display: flex;
@@ -260,71 +287,123 @@ body {
   align-self: center;
 }
 
-.couple-description {
-  $bride-aspect-ratio: 0.6662;
-  $groom-aspect-ratio: 0.7;
-  $big-height: 452px;
-  $small-height: 240px;
-
-  .bride {
-    float: right;
-    margin-top: 150px;
-    margin-left: 50px;
-    @include border-radius(50%);
-    width: calc(#{$big-height} * #{$bride-aspect-ratio});
-    height: $big-height;
-    img{
-      width: calc(#{$big-height} * #{$bride-aspect-ratio});
-      height: $big-height;
-      @include border-radius(50%);
-    }
-    @media screen and (max-width: $screen-xs){
-      width: calc(#{$small-height} * #{$bride-aspect-ratio});
-      height: $small-height;
-      img{
-        width: calc(#{$small-height} * #{$bride-aspect-ratio});
-        height: $small-height;
-        margin: 0 auto;
-      }
-    }
-  }
-}
-
 #timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .title > .line {
+    border-top: 3px solid $text-color;
+    align-self: center;
+    flex-grow: 2;
+  }
+  
   margin-top: 2em;
   margin-bottom: 2em;
   h2 {
+    font-size: 40px;
     text-align: center;
     line-height: 1.5;
     white-space: nowrap;
   }
 }
 
-#page {
+#timeline .items {
+  background-image: url('../images/background - pastel.png');
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#timeline .item {
+  background-color: white;
+  padding: 50px 15px 50px;
+  margin: 50px 10px 10px 50px;
+  flex-basis: 40%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .header {
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 5px;
+    flex-basis: 40%;
+  }
+
+  .time {
+    flex-grow: 2;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 10px;
+  }
+
+  .clock {
+    width: 46.5px;
+    height: 46.5px;
+    margin: 0px 20px 0px 20px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .item-img {
+    width: 40px;
+    height: 35px;
+    justify-self: flex-end;
+  }
+}
+
+#getting-there {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+  h2 {
+    padding-bottom: 50px;
+  }
+}
+
+#getting-there .item {
   display: flex;
   flex-direction: column;
-	position: relative;
-	overflow-x: hidden;
-	width: 100%;
-	height: 100%;
-	@include transition(.5s);
-	.offcanvas & {
-		overflow: hidden;	
-		position: absolute;
-		
-		&:after {
-			@include transition(2s);
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: 101;
-			background: rgba(0,0,0,.7);
-			content: "";
-		}
-	}
+  align-items: center;
+  margin: 50px;
 }
+
+#getting-there {
+  #accommodation {
+    flex-basis: 40%;
+  }
+  #directions {
+    flex-basis: 40%;
+  }
+  #kids {
+    flex-basis: 80%;
+  }
+
+  .button {
+    width: 50%;
+  }
+}
+
+
+.map {
+  width: 100%;
+}
+
+
 a {
 	color: $brand-primary;
 	@include transition(.5s);
@@ -356,93 +435,6 @@ h1, h2, h3, h4, h5, h6, figure {
 ::selection {
   color: $brand-white;
   background: $brand-primary;
-}
-
-#timeline,
-.fh5co-bg {
-	background-size: cover;
-	background-position: top center;
-	background-repeat: no-repeat;
-	position: relative;
-	width: 100%;
-}
-
-.footer-bg {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top center;
-}
-
-
-.fh5co-cover {
-	.overlay {
-		z-index:0;
-		position: absolute;
-		bottom: 0;
-		top: 0;
-		left: 0;
-		right: 0;
-		background: rgba(0, 0, 0, .5);
-	}
-}
-
-#timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .event-and-time {
-    white-space: nowrap;
-    border-bottom: 1px solid rgba($text-color,.5);
-    margin-bottom: 1em;
-  }
-	.overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, .4);
-	}
-
-	@media screen and (max-width: $screen-sm) {
-		height: inherit;
-		padding: 7em 0;
-	}
-
-	.event-wrap {
-		border: 2px solid rgba($text-color,.5);
-		padding: 30px;
-		width: 100%;
-    height: 60%;
-		float: left;
-		@include border-radius(4px);
-		@media screen and (max-width: $screen-sm) {
-			margin-bottom: 10px;
-		}
-		h3 {
-			font-size: 28px;
-      font-weight: 700;
-			color: $header-color;
-      font-family: $header-font;
-			display: inline-block;
-			padding-bottom: 20px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-		}
-		p,span {
-			display: inline-block;
-			color: rgba($text-color,.8);
-      font-family: $text-font;
-			font-size: 18px;
-      text-shadow: 0px 0px $text-color;
-		}
-		i {
-			color: rgba($text-color,1);
-      font-family: $text-font;
-			font-size: 24px;
-		}
-	}
 }
 
 #accomodation {
