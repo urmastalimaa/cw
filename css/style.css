@@ -339,26 +339,36 @@ h1, h2, h3, h4, h5, h6, figure {
   #gifts .poem {
     text-align: center; }
 
+#questions {
+  background-image: url("../images/background - pastel.png");
+  text-align: center;
+  width: 100%; }
+
 #registration {
-  margin-top: 2em; }
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   #registration h2 {
     text-align: center;
     margin-bottom: 1em; }
-  #registration .registration-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-
-#map {
-  width: 100%;
-  height: 500px;
-  position: relative; }
-  @media screen and (max-width: 768px) {
-    #map {
-      height: 200px; } }
-
-form label {
-  font-weight: normal !important; }
+  #registration #rsvp-form {
+    width: 50%; }
+    #registration #rsvp-form img {
+      width: 30px; }
+    #registration #rsvp-form .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    #registration #rsvp-form #mainCourseChoices {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+  #registration button {
+    text-transform: uppercase;
+    background-color: #948030;
+    border: 2px solid #948030;
+    border-radius: 15px; }
 
 h1, h2 {
   margin: 0;
@@ -458,173 +468,11 @@ h1, h2 {
     .heart {
       display: none; } }
 
-.couple-half {
-  width: 50%;
-  float: left; }
-  .couple-half.full {
-    width: 100%; }
-    .couple-half.full .desc-bride, .couple-half.full .desc-groom {
-      display: table;
-      text-align: center;
-      white-space: nowrap; }
-    .couple-half.full .bride {
-      float: left; }
-  @media screen and (max-width: 768px) {
-    .couple-half {
-      width: 100%; } }
-  .couple-half h3 {
-    font-family: "Montserrat Italic";
-    color: #948030;
-    font-size: 30px; }
-  .couple-half .bride {
-    float: right;
-    margin-right: 5px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-    width: calc(200px * 0.67);
-    height: 200px; }
-    .couple-half .bride img {
-      width: 150px;
-      height: 200px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      border-radius: 50%; }
-    @media screen and (max-width: 480px) {
-      .couple-half .bride {
-        width: 100%;
-        height: 140px; }
-        .couple-half .bride img {
-          width: calc(140px * 0.67);
-          height: 140px;
-          margin: 0 auto; } }
-  .couple-half .desc-bride {
-    padding-right: calc(200px * 0.67 + 20px);
-    text-align: right; }
-  .couple-half .groom {
-    float: left;
-    margin-left: 5px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-    width: calc(200px * 0.7);
-    height: 200px; }
-    .couple-half .groom img {
-      width: calc(200px * 0.7);
-      height: 200px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      border-radius: 50%; }
-    @media screen and (max-width: 480px) {
-      .couple-half .groom {
-        width: 100%;
-        height: 140px; }
-        .couple-half .groom img {
-          width: calc(140px * 0.7);
-          height: 140px;
-          margin: 0 auto; } }
-  .couple-half .desc-groom {
-    padding-left: 180px;
-    text-align: left; }
-  @media screen and (max-width: 480px) {
-    .couple-half .groom, .couple-half .bride {
-      margin-left: 0;
-      margin-right: 0; }
-    .couple-half .desc-groom {
-      padding-left: 0;
-      text-align: center; }
-    .couple-half .desc-bride {
-      padding-right: 0;
-      text-align: center; } }
-
-#registration .fh5co-heading {
-  margin-bottom: 2em; }
-
-#registrationQuery {
-  font-family: "Montserrat Regular";
-  color: #948030;
-  font-size: 22px;
-  text-shadow: 0px 0px 0px; }
-
-#what-to-bring {
-  position: relative;
-  margin-bottom: 2em; }
-  #what-to-bring .fh5co-heading h2 {
-    color: #948030;
-    font-family: "Montserrat Italic"; }
-  #what-to-bring .fh5co-heading p {
-    line-height: 2.5;
-    color: #948030;
-    font-size: 22px;
-    text-shadow: 0px 0px 0px;
-    font-family: "Montserrat Regular"; }
-  #what-to-bring .fh5co-heading {
-    margin-bottom: 2em; }
-    #what-to-bring .fh5co-heading h2 {
-      margin-bottom: 0; }
-
 div:after {
   clear: both; }
 
 .container:after {
   clear: both; }
-
-#fh5co-footer {
-  clear: both;
-  padding: 2em 0;
-  text-align: center;
-  color: #948030;
-  font-family: "Montserrat Regular";
-  font-size: 24px; }
-
-.btn {
-  margin-right: 4px;
-  margin-bottom: 4px;
-  font-family: "Montserrat Regular";
-  font-size: 16px;
-  font-weight: 400;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  border-radius: 30px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  padding: 8px 20px; }
-  .btn.btn-md {
-    padding: 8px 20px !important; }
-  .btn.btn-lg {
-    padding: 18px 36px !important; }
-  .btn:hover, .btn:active, .btn:focus {
-    box-shadow: none !important;
-    outline: none !important; }
-
-.btn-primary {
-  background: #948030;
-  color: #fff;
-  border: 2px solid #C5AE87; }
-  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: #cdba98 !important;
-    border-color: #cdba98 !important; }
-  .btn-primary.btn-outline {
-    background: transparent;
-    color: #C5AE87;
-    border: 2px solid #C5AE87; }
-    .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-      background: #C5AE87;
-      color: #fff; }
-
-.form-group .btn-primary {
-  background: #B76E79;
-  border: 2px solid #B76E79; }
-
-#rsvp-form {
-  margin-left: 20px;
-  margin-right: 20px; }
 
 .form-control {
   box-shadow: none;

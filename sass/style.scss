@@ -535,6 +535,12 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+#questions {
+  background-image: url('../images/background - pastel.png');
+  text-align: center;
+  width: 100%;
+}
+
 #registration {
   margin-top: 2em;
 
@@ -543,29 +549,43 @@ h1, h2, h3, h4, h5, h6, figure {
     margin-bottom: 1em;
   }
 
-  .registration-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #rsvp-form {
+    width: 50%;
+
+    img {
+      width: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #mainCourseChoices {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  button {
+    text-transform: uppercase;
+    background-color: $text-color;
+    border: 2px solid $text-color;
+    border-radius: 15px;
   }
 }
 
-// Map
-#map {
-	width: 100%;
-	height: 500px;
-	position: relative;
-	@media screen and (max-width: $screen-sm) {
-		height: 200px;
-	}
-}
-
-
-form {
-	label {
-		font-weight: normal!important;
-	}
-}
+// form {
+// 	label {
+// 		font-weight: normal!important;
+// 	}
+// }
 
 h1, h2 {
   margin: 0;
@@ -669,141 +689,6 @@ h1, h2 {
 		display: none;
 	}
 }
-.couple-half{
-	width: 50%;
-  &.full {
-    width: 100%;
-
-    .desc-bride, .desc-groom {
-      display: table;
-      text-align: center;
-      white-space: nowrap;
-    }
-
-    .bride {
-      float: left;
-    } 
-  }
-	float: left;
-	@media screen and (max-width: $screen-sm){
-		width: 100%;
-	}
-	h3{
-		font-family: $header-font;
-		color: $header-color;
-		font-size: 30px;
-	}
-  $bride-aspect-ratio: 0.67;
-  $groom-aspect-ratio: 0.7;
-  $big-height: 200px;
-  $small-height: 140px;
-
-	.bride{
-		float: right;
-		margin-right: 5px;
-		@include border-radius(50%);
-    width: calc(#{$big-height} * #{$bride-aspect-ratio});
-		height: $big-height;
-		img{
-			width: 150px;
-			height: $big-height;
-			@include border-radius(50%);
-		}
-		@media screen and (max-width: $screen-xs){
-			width: 100%;
-			height: 140px;
-			img{
-        width: calc(#{$small-height} * #{$bride-aspect-ratio});
-				height: $small-height;
-				margin: 0 auto;
-			}
-		}
-	}
-	.desc-bride{
-		padding-right: calc(#{$big-height} * #{$bride-aspect-ratio} + 20px);
-		text-align: right;
-	}
-	.groom{
-		float: left;
-		margin-left: 5px;
-		@include border-radius(50%);
-		width: calc(#{$big-height} * #{$groom-aspect-ratio});
-		height: $big-height;
-		img{
-      width: calc(#{$big-height} * #{$groom-aspect-ratio});
-			height: $big-height;
-			@include border-radius(50%);
-		}
-		@media screen and (max-width: $screen-xs){
-			width: 100%;
-			height: 140px;
-			img{
-        width: calc(#{$small-height} * #{$groom-aspect-ratio});
-				height: $small-height;
-				margin: 0 auto;
-
-			}
-		}
-	}
-	.desc-groom{
-		padding-left: 180px;
-		text-align: left;
-	}
-	@media screen and (max-width: $screen-xs){
-		.groom,.bride{
-			margin-left: 0;
-			margin-right: 0;
-		}
-		.desc-groom{
-			padding-left: 0;
-			text-align: center;
-		}
-		.desc-bride{
-			padding-right: 0;
-			text-align: center;
-		}
-	}
-}
-
-#registration {
-  .fh5co-heading {
-    margin-bottom: 2em;
-  }
-}
-
-#registrationQuery {
-  font-family: $text-font;
-  color: $text-color;
-  font-size: 22px;
-  text-shadow: 0px 0px 0px;
-}
-
-#what-to-bring {
-	position: relative;
-  margin-bottom: 2em;
-
-	.fh5co-heading {
-		h2 {
-			color: $header-color;
-			font-family: $header-font;
-		}
-		p{
-      line-height: 2.5;
-			color: $text-color;
-      font-size: 22px;
-      text-shadow: 0px 0px 0px;
-			font-family: $text-font;
-		}
-	}
-
-	.fh5co-heading {
-		margin-bottom: 2em;
-		h2 {
-			margin-bottom: 0;
-		}
-	}
-
-}
 
 div {
   &:after {
@@ -815,67 +700,6 @@ div {
   &:after {
     clear: both;
   }
-}
-
-#fh5co-footer {
-	clear: both;
-	padding: 2em 0;
-  text-align: center;
-  color: $text-color;
-  font-family: $text-font;
-  font-size: 24px;
-}
-
-// Buttons
-.btn {
-	margin-right: 4px;
-	margin-bottom: 4px;
-	font-family: $text-font;
-	font-size: 16px;
-	font-weight: 400;
-	@include border-radius(30px);
-	@include transition(.5s);
-	padding: 8px 20px;
-	&.btn-md {
-		padding: 8px 20px!important;
-	}
-	&.btn-lg {
-		padding: 18px 36px!important;
-	}
-	&:hover, &:active, &:focus {
-		box-shadow: none!important;
-		outline: none!important;
-	}
-}
-.btn-primary {
-	background: $text-color;
-	color: $brand-white;
-	border: 2px solid $brand-primary;
-	&:hover, &:focus, &:active {
-		background: lighten($brand-primary, 5%)!important;
-		border-color: lighten($brand-primary, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-primary;
-		border: 2px solid $brand-primary;
-		&:hover, &:focus, &:active {
-			background: $brand-primary;
-			color: $brand-white;
-		}
-	}
-}
-
-.form-group {
-  .btn-primary {
-    background: $brand-secondary;
-    border: 2px solid $brand-secondary;
-  }
-}
-
-#rsvp-form {
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 // Form Input Field

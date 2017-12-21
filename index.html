@@ -28,7 +28,7 @@
     </div>
 
     <div id="couple-about-each-other">
-      <div class="simply-countdown simply-countdown-one text-center"></div/>
+      <div class="simply-countdown simply-countdown-one text-center"></div>
 
       <div id="descriptions">
 
@@ -216,58 +216,62 @@
       </div>
     </div>
 
-    <!--
+    <div id="questions">
+      <div id="registration">
+        <h2>RSVP</h2>
+        <form id="rsvp-form" data-toggle="validator" role="form">
+          <div class="form-group">
+            <input type="text" class="form-control" id="inputName" placeholder="Name(s)" required>
+            <div class="help-block with-errors"></div>
+          </div>
 
-    <div id="registration" class="fh5co-bg">
-      <h2>RSVP</h2>
-      <div class="row registration-items">
-        <div class="col-6 text-center">
-          <form id="rsvp-form" data-toggle="validator" role="form">
+          <div class="form-group">
+            <select id="inputParticipation" name="inputParticipation" class="form-control">
+              <option value="1">Delightfully accepts</option>
+              <option value="2">Regretfully declines</option>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <input type="text" class="form-control" id="inputName" placeholder="Name(s)" required>
-              <div class="help-block with-errors"></div>
-            </div>
+          <div class="form-group">
+            <label class="control-label" for="inputTransportation">Transportation</label>
+            <select id="inputTransportation" name="inputTransportation" class="form-control">
+              <option value="1">Coming with own car</option>
+              <option value="2">Need transportation</option>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <select id="inputParticipation" name="inputParticipation" class="form-control">
-                <option value="1">Delightfully accepts</option>
-                <option value="2">Regretfully declines</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label" for="inputTransportation">Transportation</label>
-              <select id="inputTransportation" name="inputTransportation" class="form-control">
-                <option value="1">Coming with own car</option>
-                <option value="2">Need transportation</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="inputMainCourse" class="control-label">Main Course:</label>
-              <div id="mainCourseChoices">
-                <input id="inputMainCourseMeat" type="checkbox" name="Meat"/>Meat</br>
-                <input id="inputMainCourseFish" type="checkbox" name="Fish"/>Fish</br>
-                <input id="inputMainCourseVegetartian" type="checkbox" name="Vegetarian"/>Vegetarian</br>
+          <div class="form-group">
+            <label for="inputMainCourse" class="control-label">Main Course</label>
+            <div id="mainCourseChoices">
+              <div class="choice">
+                <img src="images/icon - beef.png"/>
+                <img src="images/icon - chicken.png"/>
+                <input id="inputMainCourseMeat" type="checkbox" name="Beef/Chicken"/>
+              </div>
+              <div class="choice">
+                <img src="images/icon - fish.png"/>
+                <input id="inputMainCourseFish" type="checkbox" name="Fish"/>
+              </div>
+              <div class="choice">
+                <img src="images/icon - carrot.png"/>
+                <input id="inputMainCourseVegetartian" type="checkbox" name="Vegetarian"/>
               </div>
             </div>
-            <div id="formResult" class="form-group alert-danger" style="display:none;" >
-            </div>
+          </div>
+          <div id="formResult" class="form-group alert-danger" style="display:none;" >
+          </div>
 
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button id="clear" class="btn btn-primary">Resubmit</button>
-              </div>
-          </form>
-        </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button id="clear" class="btn btn-primary">Resubmit</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="contact" class="text-center">
+        Contact person on the wedding day: Anu Ilves +372 5154644
       </div>
     </div>
-
-    <div id="contact" class="text-center">
-      Contact person on the wedding day: Anu Ilves +372 5154644
-    </div>
-    -->
   </div>
 
   <!-- jQuery -->
