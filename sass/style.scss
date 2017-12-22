@@ -169,6 +169,7 @@ body {
 }
 
 #page {
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,7 +202,6 @@ body {
   flex-direction: column;
   align-items: center;
 
-
   height: 50em;
 
   @media screen and (max-width: $screen-sm) {
@@ -209,7 +209,7 @@ body {
   }
   width: 60%;
   img {
-    width: 100%;
+    width: 60%;
   }
   margin-top: 0.5em;
   align-self: center;
@@ -294,6 +294,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
+    padding-bottom: 50px;
   }
 
   .title > .line {
@@ -304,12 +305,6 @@ body {
   
   margin-top: 2em;
   margin-bottom: 2em;
-  h2 {
-    font-size: 1em;
-    text-align: center;
-    line-height: 1.5;
-    white-space: nowrap;
-  }
 }
 
 #timeline .items {
@@ -318,6 +313,13 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+
+  h2 {
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
 }
 
 #timeline .item {

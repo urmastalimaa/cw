@@ -61,6 +61,7 @@ body {
   background-repeat: no-repeat; }
 
 #page {
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,7 +104,7 @@ body {
     #header {
       height: 10em; } }
   #header img {
-    width: 100%; }
+    width: 60%; }
 
 #couple-about-each-other {
   width: 90%;
@@ -166,16 +167,12 @@ body {
   #timeline .title {
     display: flex;
     flex-direction: row;
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 50px; }
   #timeline .title > .line {
     border-top: 3px solid #948030;
     align-self: center;
     flex-grow: 2; }
-  #timeline h2 {
-    font-size: 1em;
-    text-align: center;
-    line-height: 1.5;
-    white-space: nowrap; }
 
 #timeline .items {
   background-image: url("../images/background - pastel.png");
@@ -183,6 +180,11 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around; }
+  #timeline .items h2 {
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.5;
+    white-space: nowrap; }
 
 #timeline .item {
   background-color: white;
