@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Montserrat Italic';
-  src: url("../fonts/Montserrat-Italic.otf") format("opentype"); }
+  src: url("/fonts/Montserrat-Italic.otf") format("opentype"); }
 @font-face {
   font-family: 'Montserrat LightItalic';
-  src: url("../fonts/Montserrat-LightItalic.otf") format("opentype"); }
+  src: url("/fonts/Montserrat-LightItalic.otf") format("opentype"); }
 @font-face {
   font-family: 'Montserrat Regular';
-  src: url("../fonts/Montserrat-Regular.otf") format("opentype"); }
+  src: url("/fonts/Montserrat-Regular.otf") format("opentype"); }
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
