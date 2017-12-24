@@ -410,9 +410,9 @@ body {
 
   .description {
     font-size: 1em;
-    @media screen and (max-width: $screen-sm) {
-      font-size: 0.5em;
-    }
+    // @media screen and (max-width: $screen-sm) {
+    //   font-size: 0.5em;
+    // }
   }
 
   .item-img {
@@ -435,6 +435,29 @@ body {
   }
 }
 
+#accomodation {
+  h2 { 
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  margin-top: 2em;
+  width: 60%;
+  align-self: center;
+}
+
+#getting-there .questions {
+  margin-top: 2em;
+}
+
+#getting-there .prices {
+  height: 100%;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #getting-there .item {
   display: flex;
   flex-direction: column;
@@ -450,16 +473,22 @@ body {
 #getting-there {
   #accommodation {
     flex-basis: 40%;
+    @media screen and (max-width: $screen-sm) {
+      flex-basis: 80%;
+    }
   }
   #directions {
     flex-basis: 40%;
+    @media screen and (max-width: $screen-sm) {
+      flex-basis: 80%;
+    }
   }
   #kids {
     flex-basis: 80%;
   }
 
   .button {
-    width: 50%;
+    width: 75%;
   }
 
   .map {
@@ -470,7 +499,7 @@ body {
 #what-to-bring {
   background-image: url('../images/background - pastel photo of Nick and Liisa.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
 
   display: flex;
@@ -479,16 +508,23 @@ body {
   width: 100%;
 }
 
-#flowers {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#gifts {
+  h2 { 
+    text-align: center;
+    margin-bottom: 1em;
+    font-style: italic;
+    font-family: "Montserrat Italic"
+  }
+  margin-top: 2em;
+  margin-bottom: 10em;
+  width: 60%;
+  align-self: center;
 
-  img {
-    width: 40%;
-    display: block;
+  .poem {
+    text-align: center;
   }
 }
+
 
 .poem {
   font-family: 'Montserrat LightItalic';
@@ -499,12 +535,35 @@ body {
   }
 }
 
+
+#flowers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    width: 20%;
+    display: block;
+  }
+}
+
 #preparation {
+  margin-top: 2em;
+  margin-bottom: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 70%;
   text-align: center;
+
+  h2 {
+    font-family: "Montserrat Italic";
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
 
   img {
     width: 100%;
@@ -567,26 +626,6 @@ h1, h2, h3, h4, h5, h6, figure {
   background: $brand-primary;
 }
 
-#accomodation {
-  h2 { 
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  margin-top: 2em;
-  width: 60%;
-  align-self: center;
-
-}
-
-#getting-there {
-  .prices {
-    margin-top: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 #flowers {
   h2 { 
     text-align: center;
@@ -595,20 +634,6 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-top: 2em;
   width: 60%;
   align-self: center;
-}
-
-#gifts {
-  h2 { 
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  margin-top: 2em;
-  width: 60%;
-  align-self: center;
-
-  .poem {
-    text-align: center;
-  }
 }
 
 #questions {
@@ -652,12 +677,15 @@ h1, h2, h3, h4, h5, h6, figure {
     }
   }
 
-  button {
-    text-transform: uppercase;
-    background-color: $text-color;
-    border: 2px solid $text-color;
-    border-radius: 15px;
-  }
+}
+#page .btn {
+  text-transform: uppercase;
+  font-family: "Montserrat Regular";
+  background-color: $text-color;
+  border: 2px solid $text-color;
+  border-radius: 0.75em;
+  padding: 0.125em 1em;
+  font-size: 1em;
 }
 
 #video {
