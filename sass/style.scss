@@ -326,6 +326,10 @@ body {
   }
 }
 
+a button {
+  cursor: pointer;
+}
+
 #couple-about-each-other.expanded .couple-description {
   width: 100%;
 }
@@ -472,6 +476,8 @@ body {
 
   h2 {
     padding-bottom: 50px;
+    font-style: italic;
+    font-family: 'Montserrat Italic';
   }
 }
 

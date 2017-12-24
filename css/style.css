@@ -185,6 +185,9 @@ body {
 #couple-about-each-other .couple-description.expanded .read-less {
   display: block; }
 
+a button {
+  cursor: pointer; }
+
 #couple-about-each-other.expanded .couple-description {
   width: 100%; }
 
@@ -295,7 +298,9 @@ body {
   flex-flow: row wrap;
   justify-content: space-evenly; }
   #getting-there h2 {
-    padding-bottom: 50px; }
+    padding-bottom: 50px;
+    font-style: italic;
+    font-family: 'Montserrat Italic'; }
 
 #accomodation {
   margin-top: 2em;
