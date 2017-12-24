@@ -126,7 +126,7 @@ body {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row; }
+  flex-flow: row wrap; }
   @media screen and (max-width: 768px) {
     #descriptions {
       flex-flow: row wrap; } }
@@ -164,9 +164,29 @@ body {
     @media screen and (max-width: 768px) {
       #couple-about-each-other .text {
         font-size: 0.5em; } }
-  #couple-about-each-other .read-more {
-    width: 30%;
-    text-align: center; }
+  #couple-about-each-other .full-desc {
+    text-transform: none; }
+
+#couple-about-each-other .couple-description .full-desc {
+  display: none; }
+#couple-about-each-other .couple-description .min-desc {
+  display: block; }
+#couple-about-each-other .couple-description .read-more {
+  display: block; }
+#couple-about-each-other .couple-description .read-less {
+  display: none; }
+
+#couple-about-each-other .couple-description.expanded .full-desc {
+  display: block; }
+#couple-about-each-other .couple-description.expanded .min-desc {
+  display: none; }
+#couple-about-each-other .couple-description.expanded .read-more {
+  display: none; }
+#couple-about-each-other .couple-description.expanded .read-less {
+  display: block; }
+
+#couple-about-each-other.expanded .couple-description {
+  width: 100%; }
 
 #couple-about-each-other .couple-description {
   width: 45%;
@@ -176,6 +196,11 @@ body {
   @media screen and (max-width: 768px) {
     #couple-about-each-other .couple-description {
       width: 100%; } }
+  #couple-about-each-other .couple-description.expanded {
+    width: 100%; }
+
+#couple-about-each-other.expanded .monogram {
+  display: none; }
 
 #couple-about-each-other .monogram {
   width: 10%;

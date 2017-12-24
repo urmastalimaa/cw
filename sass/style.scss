@@ -240,7 +240,7 @@ body {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row;
+  flex-flow: row wrap;
   @media screen and (max-width: $screen-sm) {
     flex-flow: row wrap;
   }
@@ -286,15 +286,48 @@ body {
     @media screen and (max-width: $screen-sm) {
       font-size: 0.5em;
     }
+  }
 
-    .read-more {
-    }
+  .full-desc {
+    text-transform: none;
+  }
+}
+#couple-about-each-other .couple-description {
+  .full-desc {
+    display: none;
+  }
+  .min-desc {
+    display: block;
   }
 
   .read-more {
-    width: 30%;
-    text-align: center;
+    display: block;
   }
+
+  .read-less {
+    display: none;
+  }
+}
+
+#couple-about-each-other .couple-description.expanded {
+  .full-desc {
+    display: block;
+  }
+  .min-desc {
+    display: none;
+  }
+
+  .read-more {
+    display: none;
+  }
+
+  .read-less {
+    display: block;
+  }
+}
+
+#couple-about-each-other.expanded .couple-description {
+  width: 100%;
 }
 
 #couple-about-each-other .couple-description {
@@ -302,9 +335,16 @@ body {
   @media screen and (max-width: $screen-sm) {
     width: 100%;
   }
+  &.expanded {
+    width: 100%;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#couple-about-each-other.expanded .monogram {
+  display: none;
 }
 
 #couple-about-each-other .monogram {
