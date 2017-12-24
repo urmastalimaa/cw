@@ -110,7 +110,7 @@ body {
     width: 60%; }
 
 #couple-about-each-other {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -125,29 +125,42 @@ body {
 #descriptions {
   width: 80%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  flex-direction: row; }
+  @media screen and (max-width: 768px) {
+    #descriptions {
+      flex-flow: row wrap; } }
 
 #couple-about-each-other {
   display: flex;
   flex-direction: column;
   align-items: center; }
   #couple-about-each-other .description {
-    width: 80%;
+    width: 60%;
     padding-bottom: 1em; }
   #couple-about-each-other .picture {
-    width: 100%; }
+    width: 75%;
+    z-index: 1; }
+    @media screen and (max-width: 768px) {
+      #couple-about-each-other .picture {
+        width: 90%; } }
   #couple-about-each-other .text {
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: -2em;
     font-family: 'Montserrat Regular';
     text-transform: uppercase;
-    padding: 5px;
+    padding: 0.5em;
+    padding-top: 2em;
     border-style: solid;
-    border-width: 3px;
-    height: 152px;
-    font-size: 1em; }
+    border-width: 1px;
+    height: 100%;
+    font-size: 1em;
+    text-align: justify; }
     @media screen and (max-width: 768px) {
       #couple-about-each-other .text {
         font-size: 0.5em; } }
@@ -155,21 +168,22 @@ body {
     width: 30%;
     text-align: center; }
 
-#couple-about-each-other #aboutBride {
-  width: 30%; }
-
-#couple-about-each-other #aboutGroom {
-  width: 30%; }
-
 #couple-about-each-other .couple-description {
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    #couple-about-each-other .couple-description {
+      width: 100%; } }
 
 #couple-about-each-other .monogram {
   width: 10%;
   align-self: baseline;
   margin-top: calc(100% / 6); }
+  @media screen and (max-width: 768px) {
+    #couple-about-each-other .monogram {
+      display: none; } }
 
 #timeline {
   display: flex;
