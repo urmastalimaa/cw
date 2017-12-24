@@ -96,13 +96,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 50em;
+  height: 1000px;
   width: 60%;
   margin-top: 0.5em;
   align-self: center; }
+  @media screen and (max-width: 992px) {
+    #header {
+      height: 700px; } }
   @media screen and (max-width: 768px) {
     #header {
-      height: 10em; } }
+      height: 200px; } }
   #header img {
     width: 60%; }
 
