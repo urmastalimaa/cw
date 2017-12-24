@@ -528,6 +528,10 @@ a button {
     @media screen and (max-width: $screen-sm) {
       flex-basis: 80%;
     }
+
+    a {
+      padding-top: 1em;
+    }
   }
   #kids {
     flex-basis: 80%;
