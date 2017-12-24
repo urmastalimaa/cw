@@ -260,6 +260,10 @@ body {
   align-items: center;
   margin: 50px; }
 
+.description {
+  font-style: italic;
+  font-family: 'Montserrat Italic'; }
+
 #getting-there #accommodation {
   flex-basis: 40%; }
 #getting-there #directions {
@@ -291,6 +295,7 @@ body {
 
 .poem {
   font-family: 'Montserrat LightItalic';
+  font-style: italic;
   line-height: 1; }
   .poem p {
     margin: 0px; }
