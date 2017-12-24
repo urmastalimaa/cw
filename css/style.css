@@ -196,11 +196,17 @@ body {
     display: flex;
     flex-direction: row;
     width: 80%;
-    padding-bottom: 50px; }
+    padding-bottom: 2em;
+    font-style: italic; }
   #timeline .title > .line {
-    border-top: 3px solid #948030;
+    border-top: 1px solid #948030;
     align-self: center;
-    flex-grow: 2; }
+    flex-grow: 2;
+    flex-basis: 25%; }
+    #timeline .title > .line.left {
+      margin-right: 1em; }
+    #timeline .title > .line.right {
+      margin-left: 1em; }
 
 #timeline .items {
   background-image: url("../images/background - pastel.png");

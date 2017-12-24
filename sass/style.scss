@@ -326,13 +326,22 @@ body {
     display: flex;
     flex-direction: row;
     width: 80%;
-    padding-bottom: 50px;
+    padding-bottom: 2em;
+    font-style: italic;
   }
 
   .title > .line {
-    border-top: 3px solid $text-color;
+    border-top: 1px solid $text-color;
     align-self: center;
     flex-grow: 2;
+    flex-basis: 25%;
+
+    &.left {
+      margin-right: 1em;
+    }
+    &.right {
+      margin-left: 1em;
+    }
   }
   
   margin-top: 2em;
