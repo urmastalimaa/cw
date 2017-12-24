@@ -237,14 +237,20 @@ body {
 }
 
 #descriptions {
+  width: 80%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 #couple-about-each-other {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .description {
-    width: 100%;
+    width: 80%;
+    padding-bottom: 1em;
   }
 
   .picture {
@@ -275,17 +281,23 @@ body {
 }
 
 #couple-about-each-other #aboutBride {
-  width: 40%;
+  width: 30%;
 }
 
 #couple-about-each-other #aboutGroom {
-  width: 40%;
+  width: 30%;
+}
+
+#couple-about-each-other .couple-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #couple-about-each-other .monogram {
-  width: 20%;
+  width: 10%;
   align-self: baseline;
-  margin-top: 3em;
+  margin-top: calc(100% / 6);
 }
 
 #timeline {
@@ -297,7 +309,7 @@ body {
   .title {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 80%;
     padding-bottom: 50px;
   }
 
