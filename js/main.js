@@ -102,6 +102,7 @@
     $("button.read-toggle").on('click', function(event) {
       $(event.target).parents(".couple-description").toggleClass("expanded");
       $(event.target).parents("#couple-about-each-other").toggleClass("expanded");
+      $(event.target).parents(".text")[0].scrollIntoView();
     });
   }
 
