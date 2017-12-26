@@ -52,9 +52,10 @@
     $("#formResult")
       .removeClass("alert-danger")
       .addClass("alert-success")
-      .text("Thank you")
-      .show();
-    disableRsvpForm();
+      .text("Thank you, please submit again if responding for another Person")
+      .show()
+      .delay(3000)
+      .fadeOut('fast');
   }
 
   function onRsvpFail() {
@@ -70,7 +71,6 @@
       $("#registrationQuery")
         .text("RSVP successfully sent")
         .addClass("alert-success");
-      disableRsvpForm();
       $('button#clear').on('click', function(event) {
         localStorage[rsvpSubmissionKey] = "false";
         clearRsvp();
