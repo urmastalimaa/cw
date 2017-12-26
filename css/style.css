@@ -345,6 +345,9 @@ a button {
     padding-top: 1em; }
 #getting-there #kids {
   flex-basis: 80%; }
+  #getting-there #kids .description {
+    width: 50%;
+    text-align: center; }
 #getting-there .button {
   width: 75%; }
 #getting-there .map {

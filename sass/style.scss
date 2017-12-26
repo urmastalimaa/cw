@@ -535,6 +535,10 @@ a button {
   }
   #kids {
     flex-basis: 80%;
+    .description {
+      width: 50%;
+      text-align: center;
+    }
   }
 
   .button {
