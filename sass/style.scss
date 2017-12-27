@@ -369,7 +369,8 @@ a button {
   }
   width: 10%;
   align-self: baseline;
-  margin-top: calc(100% / 6);
+  position: relative;
+  top: 25%;
 }
 
 #timeline {

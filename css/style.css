@@ -219,7 +219,8 @@ a button {
 #couple-about-each-other .monogram {
   width: 10%;
   align-self: baseline;
-  margin-top: calc(100% / 6); }
+  position: relative;
+  top: 25%; }
   @media screen and (max-width: 768px) {
     #couple-about-each-other .monogram {
       display: none; } }
