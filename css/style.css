@@ -74,6 +74,9 @@ body {
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease; }
+  @media screen and (max-width: 768px) {
+    #page {
+      margin-top: 1.5em; } }
   .offcanvas #page {
     overflow: hidden;
     position: absolute; }
@@ -108,6 +111,14 @@ body {
       height: 200px; } }
   #header img {
     width: 60%; }
+  @media screen and (max-width: 768px) {
+    #header {
+      width: 80%; }
+      #header img {
+        width: 80%; } }
+  @media screen and (max-width: 768px) {
+    #header {
+      margin-top: 0em; } }
 
 #couple-about-each-other {
   width: 80%;
@@ -220,6 +231,8 @@ a button {
   width: 90%;
   margin-top: 2em;
   margin-bottom: 2em; }
+  #timeline h2 {
+    text-align: center; }
   #timeline .title {
     display: flex;
     flex-direction: row;
@@ -280,6 +293,7 @@ a button {
     align-items: flex-start; }
   #timeline .item .clock {
     width: 15%;
+    min-width: 25px;
     margin-right: 1em; }
     @media screen and (max-width: 768px) {
       #timeline .item .clock {
@@ -298,7 +312,7 @@ a button {
   flex-flow: row wrap;
   justify-content: space-evenly; }
   #getting-there h2 {
-    padding-bottom: 50px;
+    padding-bottom: 1em;
     font-style: italic;
     font-family: 'Montserrat Italic'; }
 
@@ -310,12 +324,11 @@ a button {
     text-align: center;
     margin-bottom: 1em; }
 
-#getting-there .questions {
-  margin-top: 2em; }
+#getting-there .description {
+  margin: 1em; }
 
 #getting-there .prices {
   height: 100%;
-  margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -325,7 +338,7 @@ a button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px; }
+  margin: 2em 0px; }
 
 .description {
   font-style: italic;
@@ -335,19 +348,25 @@ a button {
   flex-basis: 40%; }
   @media screen and (max-width: 768px) {
     #getting-there #accommodation {
-      flex-basis: 80%; } }
+      flex-basis: 100%; } }
 #getting-there #directions {
   flex-basis: 40%; }
   @media screen and (max-width: 768px) {
     #getting-there #directions {
-      flex-basis: 80%; } }
+      flex-basis: 100%; } }
   #getting-there #directions a {
     padding-top: 1em; }
 #getting-there #kids {
   flex-basis: 80%; }
+  @media screen and (max-width: 768px) {
+    #getting-there #kids {
+      flex-basis: 100%; } }
   #getting-there #kids .description {
-    width: 50%;
-    text-align: center; }
+    text-align: center;
+    width: 50%; }
+    @media screen and (max-width: 768px) {
+      #getting-there #kids .description {
+        width: 100%; } }
 #getting-there .button {
   width: 75%; }
 #getting-there .map {
@@ -392,6 +411,9 @@ a button {
     margin-bottom: 1em;
     width: 20%;
     display: block; }
+    @media screen and (max-width: 768px) {
+      #flowers img {
+        width: 35%; } }
 
 #preparation {
   margin-top: 2em;
@@ -409,7 +431,9 @@ a button {
   #preparation img {
     width: 100%; }
   #preparation #attire {
-    margin: 0px 0px 30px 0px; }
+    margin: 1em; }
+  #preparation #social-media-posts {
+    margin: 1em; }
   #preparation .gender-attire {
     display: flex;
     flex-direction: row;
@@ -477,6 +501,9 @@ h1, h2, h3, h4, h5, h6, figure {
   #registration h2 {
     text-align: center;
     margin-bottom: 1em; }
+  #registration .instructions {
+    width: 80%;
+    text-align: center; }
   #registration #rsvp-form {
     width: 50%; }
     @media screen and (max-width: 768px) {
@@ -484,6 +511,9 @@ h1, h2, h3, h4, h5, h6, figure {
         width: 80%; } }
     #registration #rsvp-form img {
       width: 30px; }
+    #registration #rsvp-form img.chicken {
+      width: auto;
+      height: 30px; }
     #registration #rsvp-form .form-group {
       display: flex;
       flex-direction: column;
@@ -508,7 +538,7 @@ h1, h2, h3, h4, h5, h6, figure {
   flex-direction: column;
   align-items: center; }
   #video iframe {
-    margin-bottom: 50px;
+    margin-bottom: 1em;
     width: 100%; }
   #video img {
     width: 80%; }
