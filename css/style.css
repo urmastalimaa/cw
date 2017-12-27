@@ -331,6 +331,9 @@ a button {
 #getting-there .prices.description {
   margin-bottom: 0px; }
 
+.kids .description {
+  margin: 0px; }
+
 #getting-there .prices {
   height: 100%;
   display: flex;
@@ -417,7 +420,7 @@ a button {
     display: block; }
     @media screen and (max-width: 768px) {
       #flowers img {
-        width: 35%; } }
+        width: 60%; } }
 
 #preparation {
   margin-top: 2em;

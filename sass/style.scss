@@ -517,6 +517,10 @@ a button {
   margin-bottom: 0px;
 }
 
+.kids .description {
+  margin: 0px;
+}
+
 #getting-there .prices {
   height: 100%;
   display: flex;
@@ -628,7 +632,7 @@ a button {
     margin-bottom: 1em;
     width: 20%;
     @media screen and (max-width: $screen-sm) {
-      width: 35%;
+      width: 60%;
     }
     display: block;
   }
