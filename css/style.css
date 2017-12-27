@@ -283,8 +283,11 @@ a button {
   #timeline .item .header {
     text-transform: uppercase;
     font-size: 1em;
-    margin: 0.25em;
+    margin-right: 0.25em;
     flex-basis: 40%; }
+    @media screen and (max-width: 768px) {
+      #timeline .item .header {
+        flex-basis: 60%; } }
   #timeline .item .time {
     flex-grow: 2;
     font-size: 1em;
@@ -292,6 +295,9 @@ a button {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start; }
+    @media screen and (max-width: 768px) {
+      #timeline .item .time {
+        flex-grow: 1; } }
   #timeline .item .clock {
     width: 15%;
     min-width: 25px;

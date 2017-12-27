@@ -448,12 +448,18 @@ a button {
   .header {
     text-transform: uppercase;
     font-size: 1em;
-    margin: 0.25em;
+    margin-right: 0.25em;
     flex-basis: 40%;
+    @media screen and (max-width: $screen-sm) {
+      flex-basis: 60%;
+    }
   }
 
   .time {
     flex-grow: 2;
+    @media screen and (max-width: $screen-sm) {
+      flex-grow: 1;
+    }
     font-size: 1em;
     display: flex;
     flex-direction: row;
