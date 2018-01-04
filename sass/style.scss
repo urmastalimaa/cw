@@ -126,6 +126,14 @@ body {
 	background: #fff;
 }
 
+img {
+  min-height: 1px;
+}
+
+p {
+  width: 100%;
+}
+
 .heading {
 	margin-bottom: 5em;
 	&.heading-sm {
