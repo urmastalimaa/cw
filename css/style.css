@@ -29,7 +29,7 @@ body {
 img {
   min-height: 1px; }
 
-p {
+.text p {
   width: 100%; }
 
 .heading {
