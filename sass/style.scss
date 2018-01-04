@@ -127,7 +127,7 @@ body {
 }
 
 img {
-  min-height: auto;
+  flex-shrink: 0;
 }
 
 .text p {
