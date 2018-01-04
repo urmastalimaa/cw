@@ -517,6 +517,11 @@ a button {
   h2 { 
     text-align: center;
   }
+
+  .description {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 #accomodation h2 {
@@ -675,6 +680,7 @@ a button {
   }
 
   #attire {
+    width: 100%;
     margin: 1em;
   }
 
