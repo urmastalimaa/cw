@@ -28,12 +28,10 @@
     $("#rsvp-form select,input,textarea").prop('disabled', false);
   }
 
-  function gatherChoices(containerSelector) {
+  function radioChoice(containerSelector) {
     return $(containerSelector)
-      .find("input")
-      .filter(function(_index, input) { return $(input).is(":checked") })
-      .map(function(_index, input) { return input.name })
-      .toArray()
+      .find("input:checked")
+      .map(function(_index, input) { return input.value })[0]
   }
 
   function gatherFormData() {
@@ -42,7 +40,7 @@
       Name: $target.find("#inputName").val(),
       Participation: $target.find("#inputParticipation option:selected").text(),
       Transportation: $target.find("#inputTransportation option:selected").text(),
-      MainCourse: gatherChoices("#mainCourseChoices")
+      MainCourse: radioChoice("#mainCourseChoices")
     };
   }
 
